@@ -74,19 +74,17 @@ function GeneralInformation() {
               </Tr>
             </Thead>
             <Tbody>
-              <FormControl>
-                {tablesTableData1.map((row) => {
-                  return (
-                    <TablesTableRow
-                      sno={row.sno}
-                      name={row.name}
-                      reg={row.reg}
-                      email={row.email}
-                      roll={row.roll}
-                    />
-                  );
-                })}
-              </FormControl>
+              {tablesTableData1.map((row) => {
+                return (
+                  <TablesTableRow
+                    sno={row.sno}
+                    name={row.name}
+                    reg={row.reg}
+                    email={row.email}
+                    roll={row.roll}
+                  />
+                );
+              })}
             </Tbody>
           </Table>
         </CardBody>
