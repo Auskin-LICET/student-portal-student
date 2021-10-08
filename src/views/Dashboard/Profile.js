@@ -6,7 +6,7 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
+  SimpleGrid,
   Icon,
   Image,
   Link,
@@ -23,7 +23,7 @@ import avatar2 from "assets/img/avatars/avatar2.png";
 import avatar3 from "assets/img/avatars/avatar3.png";
 import avatar4 from "assets/img/avatars/avatar4.png";
 import avatar5 from "assets/img/avatars/avatar5.png";
-import avatar6 from "assets/img/avatars/avatar6.png";
+import avatar8 from "assets/img/avatars/avatar8.png";
 import ImageArchitect1 from "assets/img/ImageArchitect1.png";
 import ImageArchitect2 from "assets/img/ImageArchitect2.png";
 import ImageArchitect3 from "assets/img/ImageArchitect3.png";
@@ -64,6 +64,7 @@ function Profile() {
       >
         <Box
           bgImage={ProfileBgImage}
+          bgSize="cover"
           w="100%"
           h="300px"
           borderRadius="25px"
@@ -103,7 +104,7 @@ function Profile() {
             >
               <Avatar
                 me={{ md: "22px" }}
-                src={avatar4}
+                src={avatar8}
                 w="80px"
                 h="80px"
                 borderRadius="15px"
@@ -115,14 +116,14 @@ function Profile() {
                   fontWeight="bold"
                   ms={{ sm: "8px", md: "0px" }}
                 >
-                  Esthera Jackson
+                  Auskin Immanuelm J
                 </Text>
                 <Text
                   fontSize={{ sm: "sm", md: "md" }}
                   color={emailColor}
                   fontWeight="semibold"
                 >
-                  esthera@simmmple.com
+                  auskinimmanuel.24cs@licet.ac.in
                 </Text>
               </Flex>
             </Flex>
@@ -133,204 +134,98 @@ function Profile() {
           </Flex>
         </Box>
       </Box>
-      <Grid templateColumns={{ sm: "1fr", xl: "repeat(2, 1fr)" }} gap="22px">
-        <Card p="16px">
+      <SimpleGrid columns={{ sm: 1, md: 2, xl: 3 }} gap={5}>
+        <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
-              Platform Settings
+              Roll Number:
             </Text>
           </CardHeader>
+
           <CardBody px="5px">
-            <Flex direction="column">
-              <Text fontSize="sm" color="gray.500" fontWeight="600" mb="20px">
-                ACCOUNT
+            <Flex align="center" mb="18px">
+              <Text fontSize="md" color="gray.500" fontWeight="400">
+                +91 90035 45634
               </Text>
-              <Flex align="center" mb="20px">
-                <Switch colorScheme="orange" me="10px" />
-                <Text
-                  noOfLines={1}
-                  fontSize="md"
-                  color="gray.500"
-                  fontWeight="400"
-                >
-                  Email me when someone follows me
-                </Text>
-              </Flex>
-              <Flex align="center" mb="20px">
-                <Switch colorScheme="orange" me="10px" />
-                <Text
-                  noOfLines={1}
-                  fontSize="md"
-                  color="gray.500"
-                  fontWeight="400"
-                >
-                  Email me when someone answers on my post
-                </Text>
-              </Flex>
-              <Flex align="center" mb="20px">
-                <Switch colorScheme="orange" me="10px" />
-                <Text
-                  noOfLines={1}
-                  fontSize="md"
-                  color="gray.500"
-                  fontWeight="400"
-                >
-                  Email me when someone mentions me
-                </Text>
-              </Flex>
-              <Text
-                fontSize="sm"
-                color="gray.500"
-                fontWeight="600"
-                m="6px 0px 20px 0px"
-              >
-                APPLICATION
-              </Text>
-              <Flex align="center" mb="20px">
-                <Switch colorScheme="orange" me="10px" />
-                <Text
-                  noOfLines={1}
-                  fontSize="md"
-                  color="gray.500"
-                  fontWeight="400"
-                >
-                  New launches and projects
-                </Text>
-              </Flex>
-              <Flex align="center" mb="20px">
-                <Switch colorScheme="orange" me="10px" />
-                <Text
-                  noOfLines={1}
-                  fontSize="md"
-                  color="gray.500"
-                  fontWeight="400"
-                >
-                  Monthly product changes
-                </Text>
-              </Flex>
-              <Flex align="center" mb="20px">
-                <Switch colorScheme="orange" me="10px" />
-                <Text
-                  noOfLines={1}
-                  fontSize="md"
-                  color="gray.500"
-                  fontWeight="400"
-                >
-                  Subscribe to newsletter
-                </Text>
-              </Flex>
             </Flex>
           </CardBody>
         </Card>
         <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
-              Profile Information
+              Registration Number:
             </Text>
           </CardHeader>
+
           <CardBody px="5px">
-            <Flex direction="column">
-              <Text fontSize="md" color="gray.500" fontWeight="400" mb="30px">
-                Hi, I’m Esthera Jackson, Decisions: If you can’t decide, the
-                answer is no. If two equally difficult paths, choose the one
-                more painful in the short term (pain avoidance is creating an
-                illusion of equality).
+            <Flex align="center" mb="18px">
+              <Text fontSize="md" color="gray.500" fontWeight="400">
+                311120104012
               </Text>
-              <Flex align="center" mb="18px">
-                <Text
-                  fontSize="md"
-                  color={textColor}
-                  fontWeight="bold"
-                  me="10px"
-                >
-                  Full Name:{" "}
-                </Text>
-                <Text fontSize="md" color="gray.500" fontWeight="400">
-                  Esthera Jackson
-                </Text>
-              </Flex>
-              <Flex align="center" mb="18px">
-                <Text
-                  fontSize="md"
-                  color={textColor}
-                  fontWeight="bold"
-                  me="10px"
-                >
-                  Mobile:{" "}
-                </Text>
-                <Text fontSize="md" color="gray.500" fontWeight="400">
-                  (44) 123 1234 123
-                </Text>
-              </Flex>
-              <Flex align="center" mb="18px">
-                <Text
-                  fontSize="md"
-                  color={textColor}
-                  fontWeight="bold"
-                  me="10px"
-                >
-                  Email:{" "}
-                </Text>
-                <Text fontSize="md" color="gray.500" fontWeight="400">
-                  esthera@simmmple.com
-                </Text>
-              </Flex>
-              <Flex align="center" mb="18px">
-                <Text
-                  fontSize="md"
-                  color={textColor}
-                  fontWeight="bold"
-                  me="10px"
-                >
-                  Location:{" "}
-                </Text>
-                <Text fontSize="md" color="gray.500" fontWeight="400">
-                  United States
-                </Text>
-              </Flex>
-              <Flex align="center" mb="18px">
-                <Text
-                  fontSize="md"
-                  color={textColor}
-                  fontWeight="bold"
-                  me="10px"
-                >
-                  Social Media:{" "}
-                </Text>
-                <Flex>
-                  <Link
-                    href="#"
-                    color="orange.300"
-                    fontSize="lg"
-                    me="10px"
-                    _hover={{ color: "orange.300" }}
-                  >
-                    <Icon as={FaFacebook} />
-                  </Link>
-                  <Link
-                    href="#"
-                    color="orange.300"
-                    fontSize="lg"
-                    me="10px"
-                    _hover={{ color: "orange.300" }}
-                  >
-                    <Icon as={FaInstagram} />
-                  </Link>
-                  <Link
-                    href="#"
-                    color="orange.300"
-                    fontSize="lg"
-                    me="10px"
-                    _hover={{ color: "orange.300" }}
-                  >
-                    <Icon as={FaTwitter} />
-                  </Link>
-                </Flex>
-              </Flex>
             </Flex>
           </CardBody>
         </Card>
-      </Grid>
+        <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
+          <CardHeader p="12px 5px" mb="12px">
+            <Text fontSize="lg" color={textColor} fontWeight="bold">
+              Department:
+            </Text>
+          </CardHeader>
+
+          <CardBody px="5px">
+            <Flex align="center" mb="18px">
+              <Text fontSize="md" color="gray.500" fontWeight="400">
+                CSE
+              </Text>
+            </Flex>
+          </CardBody>
+        </Card>
+        <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
+          <CardHeader p="12px 5px" mb="12px">
+            <Text fontSize="lg" color={textColor} fontWeight="bold">
+              Year:
+            </Text>
+          </CardHeader>
+
+          <CardBody px="5px">
+            <Flex align="center" mb="18px">
+              <Text fontSize="md" color="gray.500" fontWeight="400">
+                II
+              </Text>
+            </Flex>
+          </CardBody>
+        </Card>
+        <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
+          <CardHeader p="12px 5px" mb="12px">
+            <Text fontSize="lg" color={textColor} fontWeight="bold">
+              Batch:
+            </Text>
+          </CardHeader>
+
+          <CardBody px="5px">
+            <Flex align="center" mb="18px">
+              <Text fontSize="md" color="gray.500" fontWeight="400">
+                2020 - 2024
+              </Text>
+            </Flex>
+          </CardBody>
+        </Card>
+        <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
+          <CardHeader p="12px 5px" mb="12px">
+            <Text fontSize="lg" color={textColor} fontWeight="bold">
+              Contact Number:
+            </Text>
+          </CardHeader>
+
+          <CardBody px="5px">
+            <Flex align="center" mb="18px">
+              <Text fontSize="md" color="gray.500" fontWeight="400">
+                +91 90035 45634
+              </Text>
+            </Flex>
+          </CardBody>
+        </Card>
+      </SimpleGrid>
     </Flex>
   );
 }
