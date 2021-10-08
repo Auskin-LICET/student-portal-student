@@ -116,7 +116,7 @@ function Profile() {
                   fontWeight="bold"
                   ms={{ sm: "8px", md: "0px" }}
                 >
-                  Auskin Immanuelm J
+                  Auskin Immanuel J
                 </Text>
                 <Text
                   fontSize={{ sm: "sm", md: "md" }}

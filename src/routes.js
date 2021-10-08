@@ -13,6 +13,7 @@ import Academicsdata from "views/Pages/Academicdata";
 import ProfessionalDevelopmentdata from "views/Pages/ProfessionalDevelopmentData";
 import InternationalData from "views/Pages/InternationalData";
 import ExtraCurricularData from "views/Pages/ExtraCurricularData";
+import Feedbackdata from "views/Pages/Feedbackdata";
 import {
   HomeIcon,
   StatsIcon,
@@ -183,6 +184,7 @@ var dashRoutes = [
         component: InternationalData,
         layout: "/admin",
       },
+
       {
         path: "/ExtracurricularData",
         name: (
@@ -199,6 +201,24 @@ var dashRoutes = [
         ),
         icon: <StatsIcon color="inherit" />,
         component: ExtraCurricularData,
+        layout: "/admin",
+      },
+      {
+        path: "/Feedbackdata",
+        name: (
+          <p
+            style={{
+              textAlign: "left",
+              lineHeight: "1.2rem",
+              whiteSpace: "normal",
+              wordWrap: "break-word",
+            }}
+          >
+            Faculty Feedback and Analysis
+          </p>
+        ),
+        icon: <StatsIcon color="inherit" />,
+        component: Feedbackdata,
         layout: "/admin",
       },
     ],

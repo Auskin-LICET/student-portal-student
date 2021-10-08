@@ -1082,3 +1082,8 @@ export const Culturals = [
     row3: "NULL",
   },
 ];
+export const Feedback = [
+  // {
+  //   row1: "NULL",
+  // },
+];
