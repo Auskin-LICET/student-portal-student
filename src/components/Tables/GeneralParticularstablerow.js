@@ -40,14 +40,10 @@ function GeneralParticularstablerow(props) {
             <FormControl>
               <Input
                 borderRadius="5px"
-                // mb="24px"
                 fontSize="sm"
                 type="text"
                 placeholder="Field"
-                width=""
-                // size="lg"
               />
-              {/* {data} */}
             </FormControl>
           </Flex>
         </Flex>

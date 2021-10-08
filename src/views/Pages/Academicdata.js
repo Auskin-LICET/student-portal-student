@@ -69,15 +69,7 @@ function Academicdata() {
 
               <Tbody>
                 {Academicinfo.map((row) => {
-                  return (
-                    <Academicstablerow
-                      row1={row.row1}
-                      row2={row.row2}
-                      row3={row.row3}
-                      row4={row.row4}
-                      row5={row.row5}
-                    />
-                  );
+                  return <Academicstablerow row1={row.row1} />;
                 })}
               </Tbody>
             </Table>
@@ -141,9 +133,7 @@ function Academicdata() {
               <Table variant="simple" color={textColor}>
                 <Tbody>
                   {AcademicSummary.map((row) => {
-                    return (
-                      <Academicstablerow row1={row.row1} row2={row.row2} />
-                    );
+                    return <Academicstablerow row1={row.row1} />;
                   })}
                 </Tbody>
               </Table>
