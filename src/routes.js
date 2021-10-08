@@ -213,7 +213,8 @@ var dashRoutes = [
         path: "/profile",
         name: "Profile",
         icon: <PersonIcon color="inherit" />,
-        secondaryNavbar: true,
+        // secondaryNavbar: true,
+        component: Profile,
         layout: "/admin",
       },
       {
