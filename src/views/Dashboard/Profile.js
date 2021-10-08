@@ -146,7 +146,7 @@ function Profile() {
                 ACCOUNT
               </Text>
               <Flex align="center" mb="20px">
-                <Switch colorScheme="teal" me="10px" />
+                <Switch colorScheme="orange" me="10px" />
                 <Text
                   noOfLines={1}
                   fontSize="md"
@@ -157,7 +157,7 @@ function Profile() {
                 </Text>
               </Flex>
               <Flex align="center" mb="20px">
-                <Switch colorScheme="teal" me="10px" />
+                <Switch colorScheme="orange" me="10px" />
                 <Text
                   noOfLines={1}
                   fontSize="md"
@@ -168,7 +168,7 @@ function Profile() {
                 </Text>
               </Flex>
               <Flex align="center" mb="20px">
-                <Switch colorScheme="teal" me="10px" />
+                <Switch colorScheme="orange" me="10px" />
                 <Text
                   noOfLines={1}
                   fontSize="md"
@@ -187,7 +187,7 @@ function Profile() {
                 APPLICATION
               </Text>
               <Flex align="center" mb="20px">
-                <Switch colorScheme="teal" me="10px" />
+                <Switch colorScheme="orange" me="10px" />
                 <Text
                   noOfLines={1}
                   fontSize="md"
@@ -198,7 +198,7 @@ function Profile() {
                 </Text>
               </Flex>
               <Flex align="center" mb="20px">
-                <Switch colorScheme="teal" me="10px" />
+                <Switch colorScheme="orange" me="10px" />
                 <Text
                   noOfLines={1}
                   fontSize="md"
@@ -209,7 +209,7 @@ function Profile() {
                 </Text>
               </Flex>
               <Flex align="center" mb="20px">
-                <Switch colorScheme="teal" me="10px" />
+                <Switch colorScheme="orange" me="10px" />
                 <Text
                   noOfLines={1}
                   fontSize="md"
@@ -300,28 +300,28 @@ function Profile() {
                 <Flex>
                   <Link
                     href="#"
-                    color="teal.300"
+                    color="orange.300"
                     fontSize="lg"
                     me="10px"
-                    _hover={{ color: "teal.300" }}
+                    _hover={{ color: "orange.300" }}
                   >
                     <Icon as={FaFacebook} />
                   </Link>
                   <Link
                     href="#"
-                    color="teal.300"
+                    color="orange.300"
                     fontSize="lg"
                     me="10px"
-                    _hover={{ color: "teal.300" }}
+                    _hover={{ color: "orange.300" }}
                   >
                     <Icon as={FaInstagram} />
                   </Link>
                   <Link
                     href="#"
-                    color="teal.300"
+                    color="orange.300"
                     fontSize="lg"
                     me="10px"
-                    _hover={{ color: "teal.300" }}
+                    _hover={{ color: "orange.300" }}
                   >
                     <Icon as={FaTwitter} />
                   </Link>

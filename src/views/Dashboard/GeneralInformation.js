@@ -5,7 +5,9 @@ import {
   Table,
   Tbody,
   Text,
-  Input,
+  Th,
+  Thead,
+  Tr,
   useColorModeValue,
   FormControl,
   FormLabel,
@@ -13,6 +15,8 @@ import {
   FormHelperText,
   Select,
   SimpleGrid,
+  Button,
+  ButtonGroup,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -20,37 +24,75 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import TablesTableRow from "components/Tables/TablesTableRow";
 import { tablesTableData1 } from "variables/general";
+import Selection from "components/Select/Selection";
 
-function Academics() {
+function GeneralInformation() {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
     <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
+      <Card mb="1rem">
+        <CardBody>
+          <Flex flexDirection="column" align="center" justify="center" w="100%">
+            <Text fontSize="xl" color={textColor} fontWeight="bold" mr="auto">
+              General Information
+            </Text>
+            <Selection />
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginTop="3rem"
+                marginBottom="1rem"
+                marginRight="1rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                View
+              </Button>
+            </Flex>
+          </Flex>
+        </CardBody>
+      </Card>
+
       <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
         <CardHeader p="6px 0px 22px 0px">
           <Text fontSize="xl" color={textColor} fontWeight="bold">
-            General Information
+            Students List
           </Text>
         </CardHeader>
         <CardBody>
-          <SimpleGrid columns={{ sm: 1, md: 2, xl: 2 }} spacing="24px" w="100%">
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" />
-            </FormControl>
-          </SimpleGrid>
+          <Table variant="simple" color={textColor}>
+            <Thead>
+              <Tr my=".8rem" pl="0px" color="gray.400">
+                <Th color="gray.400">S.No.</Th>
+                <Th pl="0px" color="gray.400">
+                  Name
+                </Th>
+                <Th color="gray.400">Resitration Number</Th>
+                <Th color="gray.400">Roll Number</Th>
+                <Th color="gray.400">Email</Th>
+                <Th></Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <FormControl>
+                {tablesTableData1.map((row) => {
+                  return (
+                    <TablesTableRow
+                      sno={row.sno}
+                      name={row.name}
+                      reg={row.reg}
+                      email={row.email}
+                      roll={row.roll}
+                    />
+                  );
+                })}
+              </FormControl>
+            </Tbody>
+          </Table>
         </CardBody>
       </Card>
     </Flex>
   );
 }
 
-export default Academics;
+export default GeneralInformation;

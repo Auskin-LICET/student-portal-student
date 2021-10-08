@@ -12,6 +12,8 @@ import {
   FormControl,
   FormLabel,
   Select,
+  SimpleGrid,
+  Button,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -19,6 +21,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import TablesTableRow from "components/Tables/TablesTableRow";
 import { tablesTableData3 } from "variables/general";
+import Selection from "components/Select/Selection";
 
 function ProfessionalDevelopment() {
   const textColor = useColorModeValue("gray.700", "white");
@@ -29,32 +32,20 @@ function ProfessionalDevelopment() {
         <CardBody>
           <Flex flexDirection="column" align="center" justify="center" w="100%">
             <Text fontSize="xl" color={textColor} fontWeight="bold" mr="auto">
-              Academic Results
+              Professional Development
             </Text>
-            <FormControl id="dept" display="inline" w="50%">
-              <FormLabel>Department</FormLabel>
-              <Select placeholder="Select Department">
-                <option>Computer Science Engineering (CSE)</option>
-                <option>Information technology (IT)</option>
-                <option>
-                  Electronics and Communications Engineering (ECE)
-                </option>
-                <option>Electrical & Electronics Engineering (EEE)</option>
-                <option>Mechanical Engineering A (MECH A)</option>
-                <option>Mechanical Engineering B (MECH B)</option>
-              </Select>
-            </FormControl>
-            <br />
-            <FormControl id="batch" display="inline" w="50%">
-              <FormLabel>Batch</FormLabel>
-              <Select placeholder="Select Batch">
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-              </Select>
-            </FormControl>
-            <br />
+            <Selection />
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginTop="3rem"
+                marginBottom="1rem"
+                marginRight="1rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                View
+              </Button>
+            </Flex>
           </Flex>
         </CardBody>
       </Card>

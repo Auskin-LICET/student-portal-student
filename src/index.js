@@ -6,7 +6,7 @@ import AuthLayout from "layouts/Auth.js";
 import AdminLayout from "layouts/Admin.js";
 
 ReactDOM.render(
-  <HashRouter>
+  <HashRouter name="">
     <Switch>
       <Route path={`/auth`} component={AuthLayout} />
       <Route path={`/admin`} component={AdminLayout} />

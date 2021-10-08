@@ -11,6 +11,8 @@ import {
   useColorModeValue,
   FormControl,
   FormLabel,
+  FormErrorMessage,
+  FormHelperText,
   Select,
   SimpleGrid,
   Button,
@@ -20,10 +22,10 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import TablesTableRow from "components/Tables/TablesTableRow";
-import { tablesTableData4 } from "variables/general";
+import { tablesTableData2 } from "variables/general";
 import Selection from "components/Select/Selection";
 
-function InternationalExposure() {
+function StudentProfile() {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
@@ -32,23 +34,13 @@ function InternationalExposure() {
         <CardBody>
           <Flex flexDirection="column" align="center" justify="center" w="100%">
             <Text fontSize="xl" color={textColor} fontWeight="bold" mr="auto">
-              International Exposure
+              Academic Results
             </Text>
             <Selection />
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginTop="3rem"
-                marginBottom="1rem"
-                marginRight="1rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                View
-              </Button>
-            </Flex>
           </Flex>
         </CardBody>
       </Card>
+
       <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
         <CardHeader p="6px 0px 22px 0px">
           <Text fontSize="xl" color={textColor} fontWeight="bold">
@@ -70,7 +62,7 @@ function InternationalExposure() {
               </Tr>
             </Thead>
             <Tbody>
-              {tablesTableData4.map((row) => {
+              {tablesTableData2.map((row) => {
                 return (
                   <TablesTableRow
                     sno={row.sno}
@@ -89,4 +81,4 @@ function InternationalExposure() {
   );
 }
 
-export default InternationalExposure;
+export default StudentProfile;

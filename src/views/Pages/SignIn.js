@@ -1,4 +1,5 @@
 import React from "react";
+// import axios from "axios";
 // Chakra imports
 import {
   Box,
@@ -7,18 +8,26 @@ import {
   FormControl,
   FormLabel,
   Heading,
+  Router,
   Input,
   Link,
   Switch,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 // Assets
 import signInImage from "assets/img/signInImage.png";
 
 function SignIn() {
-  // Chakra color mode
-  const titleColor = useColorModeValue("teal.300", "teal.200");
+  //React.useEffect(() => {
+  // axios.get("http://localhost:5000/signin").then((response) => {
+  //        console.log(response);
+  //     setPost(response.data);
+  //   });
+  // }, []);
+
+  const titleColor = useColorModeValue("orange.300", "orange.200");
   const textColor = useColorModeValue("gray.400", "white");
   return (
     <Flex position="relative" mb="40px">
@@ -44,7 +53,8 @@ function SignIn() {
             bgImage={signInImage}
             w="60%"
             h="60%"
-            bgSize="cover"
+            bgSize="300px 300px"
+            bgRepeat="no-repeat"
             bgPosition="50%"
             position="absolute"
             borderBottomLeftRadius="20px"
@@ -66,82 +76,84 @@ function SignIn() {
             <Heading color={titleColor} fontSize="32px" mb="10px">
               Welcome Back
             </Heading>
-            <Text
-              mb="36px"
-              ms="4px"
-              color={textColor}
-              fontWeight="bold"
-              fontSize="14px"
-            >
-              Enter your email and password to sign in
-            </Text>
-            <FormControl>
-              <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
-                Email
-              </FormLabel>
-              <Input
-                borderRadius="15px"
-                mb="24px"
-                fontSize="sm"
-                type="text"
-                placeholder="Your email adress"
-                size="lg"
-              />
-              <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
-                Password
-              </FormLabel>
-              <Input
-                borderRadius="15px"
+            <form action="http://localhost:5000/signin" method="GET">
+              <Text
                 mb="36px"
-                fontSize="sm"
-                type="password"
-                placeholder="Your password"
-                size="lg"
-              />
-              <FormControl display="flex" alignItems="center">
-                <Switch id="remember-login" colorScheme="teal" />
-                <FormLabel
-                  htmlFor="remember-login"
-                  mb="0"
-                  ms="1"
-                  fontWeight="normal"
-                >
-                  Remember me
-                </FormLabel>
-              </FormControl>
-              <Button
-                fontSize="10px"
-                type="submit"
-                bg="teal.300"
-                w="100%"
-                h="45"
-                mb="20px"
-                color="white"
-                mt="20px"
-                _hover={{
-                  bg: "teal.200",
-                }}
-                _active={{
-                  bg: "teal.400",
-                }}
+                ms="4px"
+                color={textColor}
+                fontWeight="bold"
+                fontSize="14px"
               >
-                SIGN IN
-              </Button>
-            </FormControl>
-            <Flex
-              flexDirection="column"
-              justifyContent="center"
-              alignItems="center"
-              maxW="100%"
-              mt="0px"
-            >
-              <Text color={textColor} fontWeight="medium">
-                Don't have an account?
-                <Link color={titleColor} as="span" ms="5px" fontWeight="bold">
-                  Sign Up
-                </Link>
+                Enter your email and password to sign in
               </Text>
-            </Flex>
+              <FormControl>
+                <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
+                  Email
+                </FormLabel>
+                <Input
+                  borderRadius="15px"
+                  mb="24px"
+                  fontSize="sm"
+                  type="text"
+                  placeholder="Your email adress"
+                  size="lg"
+                />
+                <FormLabel ms="4px" fontSize="sm" fontWeight="normal">
+                  Password
+                </FormLabel>
+                <Input
+                  borderRadius="15px"
+                  mb="36px"
+                  fontSize="sm"
+                  type="password"
+                  placeholder="Your password"
+                  size="lg"
+                />
+                <FormControl display="flex" alignItems="center">
+                  <Switch id="remember-login" colorScheme="orange" />
+                  <FormLabel
+                    htmlFor="remember-login"
+                    mb="0"
+                    ms="1"
+                    fontWeight="normal"
+                  >
+                    Remember me
+                  </FormLabel>
+                </FormControl>
+                <Button
+                  fontSize="10px"
+                  type="submit"
+                  bg="orange.300"
+                  w="100%"
+                  h="45"
+                  mb="20px"
+                  color="white"
+                  mt="20px"
+                  _hover={{
+                    bg: "orange.200",
+                  }}
+                  _active={{
+                    bg: "orange.400",
+                  }}
+                >
+                  SIGN IN
+                </Button>
+              </FormControl>
+              <Flex
+                flexDirection="column"
+                justifyContent="center"
+                alignItems="center"
+                maxW="100%"
+                mt="0px"
+              >
+                <Text color={textColor} fontWeight="medium">
+                  Don't have an account?
+                  <Link color={titleColor} as="span" ms="5px" fontWeight="bold">
+                    Sign Up
+                  </Link>
+                </Text>
+              </Flex>
+            </form>
           </Flex>
         </Flex>
       </Flex>

@@ -50,10 +50,9 @@ import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 import { dashboardTableData, timelineData } from "variables/general";
 
 export default function Dashboard() {
-  const value = "$100.000";
   // Chakra Color Mode
   const { colorMode, toggleColorMode } = useColorMode();
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
+  const iconorange = useColorModeValue("orange.300", "orange.300");
   const iconBoxInside = useColorModeValue("white", "white");
   const textColor = useColorModeValue("gray.700", "white");
   const [series, setSeries] = useState([

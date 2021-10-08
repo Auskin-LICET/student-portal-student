@@ -17,8 +17,23 @@ function TablesTableRow(props) {
   const colorStatus = useColorModeValue("white", "gray.400");
 
   return (
-    <Tr>
-      <Td minWidth={{ sm: "250px" }} pl="0px">
+    <Tr
+      cursor=""
+      variant="ghost"
+      fontSize="md"
+      color={textColor}
+      fontWeight="bold"
+      minWidth="100%"
+      onClick={() =>
+        window.open("http://localhost:3000/admin#/admin/GeneralInformationdata")
+      }
+      _hover={{
+        Radius: "20px",
+        background: "#3b4e6b",
+        color: "white",
+      }}
+    >
+      <Td minWidth={{ sm: "250px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
             <Text
@@ -32,18 +47,9 @@ function TablesTableRow(props) {
           </Flex>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "250px" }} pl="0px">
+      <Td minWidth={{ sm: "250px" }} pl="0rem">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">
-            <Button variant="ghost"
-              fontSize="md"
-              color={textColor}
-              fontWeight="bold"
-              minWidth="100%"
-            >
-              {name}
-            </Button>
-          </Flex>
+          <Flex direction="column">{name}</Flex>
         </Flex>
       </Td>
 
@@ -64,6 +70,7 @@ function TablesTableRow(props) {
           {email}
         </Text>
       </Td>
+      {/* </Button> */}
     </Tr>
   );
 }
