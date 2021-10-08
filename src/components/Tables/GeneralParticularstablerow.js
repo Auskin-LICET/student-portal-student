@@ -42,7 +42,7 @@ function GeneralParticularstablerow(props) {
                 borderRadius="5px"
                 fontSize="sm"
                 type="text"
-                placeholder="Field"
+                placeholder={field}
               />
             </FormControl>
           </Flex>
