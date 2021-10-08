@@ -9,6 +9,7 @@ import {
   Thead,
   Tr,
   useColorModeValue,
+  Button,
   FormControl,
   FormLabel,
   FormErrorMessage,
@@ -60,6 +61,17 @@ function GeneralInformationdata() {
               </Tbody>
             </Table>
           </CardBody>
+          <Flex direction="column" align="flex-end" w="100%">
+            <Button
+              marginBottom="1rem"
+              marginTop="1rem"
+              marginRight="22.5rem"
+              colorScheme="orange"
+              variant="solid"
+            >
+              Submit
+            </Button>
+          </Flex>
         </Card>
         <SimpleGrid columns={{ sm: 1, md: 2, xl: 2 }} gap={4}>
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -82,6 +94,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -104,6 +127,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -126,6 +160,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
             <CardHeader p="6px 0px 22px 0px">
@@ -147,6 +192,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -169,6 +225,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -191,6 +258,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -213,6 +291,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -235,6 +324,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -257,6 +357,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -279,6 +390,17 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Flex direction="column" align="flex-end" w="100%">
+              <Button
+                marginBottom="1rem"
+                marginTop="1rem"
+                marginRight="3.5rem"
+                colorScheme="orange"
+                variant="solid"
+              >
+                Submit
+              </Button>
+            </Flex>
           </Card>
         </SimpleGrid>
       </SimpleGrid>

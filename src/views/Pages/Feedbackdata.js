@@ -13,6 +13,7 @@ import {
   useColorModeValue,
   Stat,
   StatLabel,
+  Button,
   Box,
   FormControl,
   FormLabel,
@@ -109,6 +110,16 @@ function Feedbackdata() {
               </FormControl>
             </Flex>
           </CardBody>
+          <Flex direction="column" align="flex-end" w="100%">
+            <Button
+              marginTop="1rem"
+              marginRight="1rem"
+              colorScheme="orange"
+              variant="solid"
+            >
+              Submit
+            </Button>
+          </Flex>
         </Card>
         <br />
         <hr />
@@ -185,6 +196,16 @@ function Feedbackdata() {
               </FormControl>
             </Flex>
           </CardBody>
+          <Flex direction="column" align="flex-end" w="100%">
+            <Button
+              marginTop="1rem"
+              marginRight="1rem"
+              colorScheme="orange"
+              variant="solid"
+            >
+              Submit
+            </Button>
+          </Flex>
         </Card>
         <br />
         <hr />
@@ -214,6 +235,16 @@ function Feedbackdata() {
               </FormControl>
             </Flex>
           </CardBody>
+          <Flex direction="column" align="flex-end" w="100%">
+            <Button
+              marginTop="1rem"
+              marginRight="1rem"
+              colorScheme="orange"
+              variant="solid"
+            >
+              Submit
+            </Button>
+          </Flex>
         </Card>
       </SimpleGrid>
     </Flex>
