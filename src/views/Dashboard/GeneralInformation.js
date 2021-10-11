@@ -49,6 +49,11 @@ function GeneralInformation() {
                 View
               </Button>
             </Flex>
+            <SimpleGrid>
+              <Card>
+                <CardBody></CardBody>
+              </Card>
+            </SimpleGrid>
           </Flex>
         </CardBody>
       </Card>
