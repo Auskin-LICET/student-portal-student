@@ -13,7 +13,7 @@ import {
 import React from "react";
 
 function Academicstablerow(props) {
-  const { row1 } = props;
+  const { row1, row2, row3, row4, row5 } = props;
   const textColor = useColorModeValue("gray.700", "white");
   const bgStatus = useColorModeValue("gray.400", "#1a202c");
   const colorStatus = useColorModeValue("white", "gray.400");
@@ -36,49 +36,27 @@ function Academicstablerow(props) {
       </Td>
       <Td minWidth={{ sm: "225px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Flex direction="column">{row2}</Flex>
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "225px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
-            <Input
-              borderRadius="5px"
-              fontSize="sm"
-              type="text"
-              placeholder={row1}
-            />
+            <Flex direction="column">{row3}</Flex>
           </FormControl>
         </Flex>
       </Td>
       <Td minWidth={{ sm: "225px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
-            <Input
-              borderRadius="5px"
-              fontSize="sm"
-              type="text"
-              placeholder={row1}
-            />
+            <Flex direction="column">{row4}</Flex>
           </FormControl>
         </Flex>
       </Td>
       <Td minWidth={{ sm: "225px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
-            <Input
-              borderRadius="5px"
-              fontSize="sm"
-              type="text"
-              placeholder={row1}
-            />
-          </FormControl>
-        </Flex>
-      </Td>
-      <Td minWidth={{ sm: "225px" }}>
-        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <FormControl>
-            <Input
-              borderRadius="5px"
-              fontSize="sm"
-              type="text"
-              placeholder={row1}
-            />
+            <Flex direction="column">{row5}</Flex>
           </FormControl>
         </Flex>
       </Td>
