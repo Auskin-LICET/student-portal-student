@@ -9,7 +9,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import routes from "routes.js";
 // Custom Chakra theme
 import theme from "theme/theme.js";
-import FixedPlugin from "../components/FixedPlugin/FixedPlugin";
+
 // Custom components
 import MainPanel from "../components/Layout/MainPanel";
 import PanelContainer from "../components/Layout/PanelContainer";
@@ -129,14 +129,7 @@ export default function Dashboard(props) {
             </PanelContainer>
           </PanelContent>
         ) : null}
-        <Portal>
-          <FixedPlugin
-            secondary={getActiveNavbar(routes)}
-            rtlActive={false}
-            fixed={fixed}
-            onOpen={onOpen}
-          />
-        </Portal>
+
         <Configurator
           secondary={getActiveNavbar(routes)}
           isOpen={isOpen}
