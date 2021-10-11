@@ -7,6 +7,7 @@ import {
   Text,
   Tr,
   useColorModeValue,
+  Input,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -17,49 +18,67 @@ function InternationalTableRow(props) {
   const colorStatus = useColorModeValue("white", "gray.400");
 
   return (
-    <Tr
-      _hover={{
-        background: "#3b4e6b",
-        color: "white",
-      }}
-    >
-      <Td minWidth={{ sm: "200px" }}>
+    <Tr>
+      <Td minWidth={{ sm: "180px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
-            <Text
-              fontSize="md"
-              color={textColor}
-              fontWeight="bold"
-              minWidth="100%"
-            >
-              {row1}
-            </Text>
+            <Input
+              borderRadius="5px"
+              fontSize="sm"
+              type="text"
+              placeholder={row1}
+            />
           </Flex>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "200px" }}>
+      <Td minWidth={{ sm: "180px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row2}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row2}
+          />
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "200px" }}>
+      <Td minWidth={{ sm: "180px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row3}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row3}
+          />
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "200px" }}>
+      <Td minWidth={{ sm: "180px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row4}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row4}
+          />
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "200px" }}>
+      <Td minWidth={{ sm: "180px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row5}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row5}
+          />
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "200px" }}>
+      <Td minWidth={{ sm: "180px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row6}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row6}
+          />
         </Flex>
       </Td>
     </Tr>

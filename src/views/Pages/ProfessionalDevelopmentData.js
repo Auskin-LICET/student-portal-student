@@ -17,7 +17,10 @@ import {
   SimpleGrid,
   Grid,
   GridItem,
+  Button,
 } from "@chakra-ui/react";
+
+import { AddIcon } from "@chakra-ui/icons";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
@@ -43,9 +46,9 @@ function ProfessionalDevelopmentData() {
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
       <Grid
-        columns={{ sm: 1, md: 2, xl: 2 }}
+        columns={{ sm: 1, md: 1, xl: 1 }}
         templateRows="repeat(1, 1fr)"
-        templateColumns="repeat(2, 1fr)"
+        templateColumns="repeat(1, 1fr)"
         gap={4}
       >
         <GridItem rowSpan={1} colSpan={1}>
@@ -77,6 +80,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -108,6 +115,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -141,6 +152,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -174,6 +189,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem>
@@ -207,6 +226,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -240,6 +263,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -273,6 +300,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -306,6 +337,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -341,6 +376,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -374,6 +413,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -407,6 +450,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -440,6 +487,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem rowSpan={1} colSpan={1}>
@@ -475,6 +526,10 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
       </Grid>

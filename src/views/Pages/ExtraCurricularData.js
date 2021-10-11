@@ -17,7 +17,10 @@ import {
   SimpleGrid,
   Grid,
   GridItem,
+  Button,
 } from "@chakra-ui/react";
+
+import { AddIcon } from "@chakra-ui/icons";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
@@ -36,7 +39,7 @@ function ExtraCurricularData() {
 
   return (
     <Flex direction="column" pt={{ base: "400px", md: "75px" }}>
-      <Grid columns={{ sm: 1, md: 2, xl: 2 }} gap={4}>
+      <Grid columns={{ sm: 1, md: 1, xl: 1 }} gap={4}>
         <GridItem>
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
             <CardHeader p="6px 0px 22px 0px">
@@ -68,6 +71,10 @@ function ExtraCurricularData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem>
@@ -99,6 +106,10 @@ function ExtraCurricularData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem>
@@ -135,6 +146,10 @@ function ExtraCurricularData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
         <GridItem>
@@ -166,6 +181,10 @@ function ExtraCurricularData() {
                 </Tbody>
               </Table>
             </CardBody>
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
           </Card>
         </GridItem>
       </Grid>

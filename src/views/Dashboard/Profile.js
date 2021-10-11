@@ -145,7 +145,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                +91 90035 45634
+                24CS0856
               </Text>
             </Flex>
           </CardBody>

@@ -7,6 +7,9 @@ import {
   Text,
   Tr,
   useColorModeValue,
+  FormControl,
+  FormLabel,
+  Input,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -21,30 +24,53 @@ function ProfessionalDevelopmenttablerow(props) {
       <Td minWidth={{ sm: "5rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
-            <Text fontSize="md" color={textColor} minWidth="100%">
-              {row1}
-            </Text>
+            <Input
+              borderRadius="5px"
+              fontSize="sm"
+              type="text"
+              placeholder={row1}
+            />
           </Flex>
         </Flex>
       </Td>
       <Td minWidth={{ sm: "5rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row2}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row2}
+          />
         </Flex>
       </Td>
       <Td minWidth={{ sm: "5rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row3}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row3}
+          />
         </Flex>
       </Td>
       <Td minWidth={{ sm: "5rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row4}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row4}
+          />
         </Flex>
       </Td>
       <Td minWidth={{ sm: "5rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-          <Flex direction="column">{row5}</Flex>
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder={row5}
+          />
         </Flex>
       </Td>
     </Tr>

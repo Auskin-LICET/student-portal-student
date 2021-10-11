@@ -20,6 +20,7 @@ import {
   FormErrorMessage,
   FormHelperText,
   Select,
+  Textarea,
   SimpleGrid,
 } from "@chakra-ui/react";
 import { Separator } from "components/Separator/Separator";
@@ -98,28 +99,12 @@ function Feedbackdata() {
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               General Remarks
             </Text>
-            <Flex align="center" ps="3rem" minWidth="100%" flexWrap="nowrap">
-              <FormControl>
-                <Input
-                  borderRadius="5px"
-                  width="63rem"
-                  fontSize="sm"
-                  type="text"
-                  placeholder="General Remarks"
-                />
-              </FormControl>
-            </Flex>
           </CardBody>
-          <Flex direction="column" align="flex-end" w="100%">
-            <Button
-              marginTop="1rem"
-              marginRight="1rem"
-              colorScheme="orange"
-              variant="solid"
-            >
-              Submit
-            </Button>
-          </Flex>
+          <Textarea
+            marginTop="1rem"
+            isDisabled
+            placeholder=" General Remarks"
+          />
         </Card>
         <br />
         <hr />
@@ -184,28 +169,12 @@ function Feedbackdata() {
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               General Remarks
             </Text>
-            <Flex align="center" ps="3rem" minWidth="100%" flexWrap="nowrap">
-              <FormControl>
-                <Input
-                  borderRadius="5px"
-                  width="63rem"
-                  fontSize="sm"
-                  type="text"
-                  placeholder="General Remarks"
-                />
-              </FormControl>
-            </Flex>
           </CardBody>
-          <Flex direction="column" align="flex-end" w="100%">
-            <Button
-              marginTop="1rem"
-              marginRight="1rem"
-              colorScheme="orange"
-              variant="solid"
-            >
-              Submit
-            </Button>
-          </Flex>
+          <Textarea
+            marginTop="1rem"
+            isDisabled
+            placeholder=" General Remarks"
+          />
         </Card>
         <br />
         <hr />
@@ -223,28 +192,12 @@ function Feedbackdata() {
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               General Remarks
             </Text>
-            <Flex align="center" ps="3rem" minWidth="100%" flexWrap="nowrap">
-              <FormControl>
-                <Input
-                  borderRadius="5px"
-                  width="63rem"
-                  fontSize="sm"
-                  type="text"
-                  placeholder="General Remarks"
-                />
-              </FormControl>
-            </Flex>
           </CardBody>
-          <Flex direction="column" align="flex-end" w="100%">
-            <Button
-              marginTop="1rem"
-              marginRight="1rem"
-              colorScheme="orange"
-              variant="solid"
-            >
-              Submit
-            </Button>
-          </Flex>
+          <Textarea
+            marginTop="1rem"
+            isDisabled
+            placeholder=" General Remarks"
+          />
         </Card>
       </SimpleGrid>
     </Flex>

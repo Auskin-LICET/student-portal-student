@@ -17,8 +17,11 @@ import {
   FormErrorMessage,
   FormHelperText,
   Select,
+  Button,
   SimpleGrid,
 } from "@chakra-ui/react";
+
+import { AddIcon } from "@chakra-ui/icons";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
@@ -69,6 +72,11 @@ function InternationalData() {
               </Tbody>
             </Table>
           </CardBody>
+
+          <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+            <AddIcon w={4} h={4} me="3" />
+            Add
+          </Button>
         </Card>
       </SimpleGrid>
     </Flex>

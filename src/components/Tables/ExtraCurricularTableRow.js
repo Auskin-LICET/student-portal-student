@@ -21,12 +21,7 @@ function ExtraCurricularTableRow(props) {
       <Td minWidth={{ sm: "10rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
-            <Text
-              fontSize="md"
-              color={textColor}
-              
-              minWidth="100%"
-            >
+            <Text fontSize="md" color={textColor} minWidth="100%">
               {row1}
             </Text>
           </Flex>

@@ -31,22 +31,46 @@ var dashRoutes = [
     component: Dashboard,
     layout: "/admin",
   },
+
   {
-    path: "/GeneralInformation",
-    name: "General Information",
+    path: "/GeneralInformationdata",
+    name: (
+      <p
+        style={{
+          textAlign: "left",
+          lineHeight: "1.2rem",
+          whiteSpace: "normal",
+          wordWrap: "break-word",
+        }}
+      >
+        General Information
+      </p>
+    ),
     icon: <StatsIcon color="inherit" />,
-    component: GeneralInformation,
+    component: GeneralInformationdata,
+    layout: "/admin",
+  },
+
+  {
+    path: "/Academicsdata",
+    name: (
+      <p
+        style={{
+          textAlign: "left",
+          lineHeight: "1.2rem",
+          whiteSpace: "normal",
+          wordWrap: "break-word",
+        }}
+      >
+        Academics
+      </p>
+    ),
+    icon: <StatsIcon color="inherit" />,
+    component: Academicsdata,
     layout: "/admin",
   },
   {
-    path: "/Academics",
-    name: "Academics",
-    icon: <DocumentIcon color="inherit" />,
-    component: Academics,
-    layout: "/admin",
-  },
-  {
-    path: "/ProfessionalDevelopment",
+    path: "/ProfessionalDevelopmentdata",
     name: (
       <p
         style={{
@@ -59,12 +83,12 @@ var dashRoutes = [
         Professional Development
       </p>
     ),
-    icon: <PersonIcon color="inherit" />,
-    component: ProfessionalDevelopment,
+    icon: <StatsIcon color="inherit" />,
+    component: ProfessionalDevelopmentdata,
     layout: "/admin",
   },
   {
-    path: "/InternationalExposure",
+    path: "/InternationalData",
     name: (
       <p
         style={{
@@ -77,19 +101,31 @@ var dashRoutes = [
         International Exposure
       </p>
     ),
-    icon: <RocketIcon color="inherit" />,
-    component: InternationalExposure,
+    icon: <StatsIcon color="inherit" />,
+    component: InternationalData,
+    layout: "/admin",
+  },
+
+  {
+    path: "/ExtracurricularData",
+    name: (
+      <p
+        style={{
+          textAlign: "left",
+          lineHeight: "1.2rem",
+          whiteSpace: "normal",
+          wordWrap: "break-word",
+        }}
+      >
+        ExtraCurricular
+      </p>
+    ),
+    icon: <StatsIcon color="inherit" />,
+    component: ExtraCurricularData,
     layout: "/admin",
   },
   {
-    path: "/Extracurricular",
-    name: "Extracurricular",
-    icon: <CreditIcon color="inherit" />,
-    component: Extracurricular,
-    layout: "/admin",
-  },
-  {
-    path: "/FacultyFeedback",
+    path: "/Feedbackdata",
     name: (
       <p
         style={{
@@ -103,125 +139,8 @@ var dashRoutes = [
       </p>
     ),
     icon: <StatsIcon color="inherit" />,
-    component: FacultyFeedback,
+    component: Feedbackdata,
     layout: "/admin",
-  },
-  {
-    name: "TEST PAGES",
-    category: "account",
-    state: "pageCollapse",
-    views: [
-      {
-        path: "/GeneralInformationdata",
-        name: (
-          <p
-            style={{
-              textAlign: "left",
-              lineHeight: "1.2rem",
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-            }}
-          >
-            General Information Data
-          </p>
-        ),
-        icon: <StatsIcon color="inherit" />,
-        component: GeneralInformationdata,
-        layout: "/admin",
-      },
-
-      {
-        path: "/Academicsdata",
-        name: (
-          <p
-            style={{
-              textAlign: "left",
-              lineHeight: "1.2rem",
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-            }}
-          >
-            Academics Data
-          </p>
-        ),
-        icon: <StatsIcon color="inherit" />,
-        component: Academicsdata,
-        layout: "/admin",
-      },
-      {
-        path: "/ProfessionalDevelopmentdata",
-        name: (
-          <p
-            style={{
-              textAlign: "left",
-              lineHeight: "1.2rem",
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-            }}
-          >
-            Professional Development Data
-          </p>
-        ),
-        icon: <StatsIcon color="inherit" />,
-        component: ProfessionalDevelopmentdata,
-        layout: "/admin",
-      },
-      {
-        path: "/InternationalData",
-        name: (
-          <p
-            style={{
-              textAlign: "left",
-              lineHeight: "1.2rem",
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-            }}
-          >
-            International Exposure Data
-          </p>
-        ),
-        icon: <StatsIcon color="inherit" />,
-        component: InternationalData,
-        layout: "/admin",
-      },
-
-      {
-        path: "/ExtracurricularData",
-        name: (
-          <p
-            style={{
-              textAlign: "left",
-              lineHeight: "1.2rem",
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-            }}
-          >
-            ExtraCurricular Data
-          </p>
-        ),
-        icon: <StatsIcon color="inherit" />,
-        component: ExtraCurricularData,
-        layout: "/admin",
-      },
-      {
-        path: "/Feedbackdata",
-        name: (
-          <p
-            style={{
-              textAlign: "left",
-              lineHeight: "1.2rem",
-              whiteSpace: "normal",
-              wordWrap: "break-word",
-            }}
-          >
-            Faculty Feedback and Analysis
-          </p>
-        ),
-        icon: <StatsIcon color="inherit" />,
-        component: Feedbackdata,
-        layout: "/admin",
-      },
-    ],
   },
 
   {
@@ -233,7 +152,6 @@ var dashRoutes = [
         path: "/profile",
         name: "Profile",
         icon: <PersonIcon color="inherit" />,
-        // secondaryNavbar: true,
         component: Profile,
         layout: "/admin",
       },
