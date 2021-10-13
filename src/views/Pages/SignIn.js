@@ -20,13 +20,6 @@ import {
 import signInImage from "assets/img/signInImage.png";
 
 function SignIn() {
-  //React.useEffect(() => {
-  // axios.get("http://localhost:5000/signin").then((response) => {
-  //        console.log(response);
-  //     setPost(response.data);
-  //   });
-  // }, []);
-
   const titleColor = useColorModeValue("orange.300", "orange.200");
   const textColor = useColorModeValue("gray.400", "white");
   return (
