@@ -38,12 +38,6 @@ function GeneralParticularstablerow(props) {
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
             <FormControl>
-              {/* <Input
-                borderRadius="5px"
-                fontSize="sm"
-                type="text"
-                placeholder={field}
-              /> */}
               {data}
               {show}
             </FormControl>
