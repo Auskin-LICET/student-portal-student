@@ -22,6 +22,23 @@ import {
   DocumentIcon,
   RocketIcon,
 } from "components/Icons/Icons";
+import {
+  Avatar,
+  Badge,
+  Button,
+  Flex,
+  FormControl,
+  Input,
+  Td,
+  Text,
+  Tr,
+  useColorModeValue,
+} from "@chakra-ui/react";
+
+
+//function nfunction(){
+//  console.log("HELLO");
+//}
 
 var dashRoutes = [
   {
@@ -157,9 +174,16 @@ var dashRoutes = [
       },
       {
         path: "/signin",
-        name: "Sign In",
+        name: "Sign Out",
         icon: <DocumentIcon color="inherit" />,
         component: SignIn,
+        layout: "/auth",
+      },
+      {
+        path: "/GeneralInformationdata",
+        name: "Genaral",
+        icon: <PersonIcon color="inherit" />,
+        component: GeneralInformationdata,
         layout: "/auth",
       },
     ],
