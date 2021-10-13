@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 // Chakra imports
 import {
   Flex,
@@ -8,6 +9,8 @@ import {
   Th,
   Thead,
   Tr,
+  Td,
+  Input,
   useColorModeValue,
   Button,
   FormControl,
@@ -36,6 +39,31 @@ import { Goals } from "variables/general";
 import { ProfessionalMembership } from "variables/general";
 
 function GeneralInformationdata() {
+
+  function funinsert(){
+    let params = new URLSearchParams();
+    params.append("name", document.getElementById("NID").value);
+    params.append("rollno", document.getElementById("RID").value);
+    params.append("registerno", document.getElementById("REID").value);
+    params.append("sex", document.getElementById("SID").value);
+    params.append("dateofbirth", document.getElementById("DOBID").value);
+    params.append("nationality", document.getElementById("NATIONID").value);
+    params.append("religion", document.getElementById("RELIGIONID").value);
+    params.append("parish", document.getElementById("PARISHID").value);
+    params.append("dalit", document.getElementById("DALITID").value);
+    params.append("community", document.getElementById("COMMUNITYID").value);
+    params.append("bloodgroup", document.getElementById("BLOODID").value);
+    params.append("mothertounge", document.getElementById("MOTHERID").value);
+    params.append("contact", document.getElementById("CONTACTID").value);
+    params.append("aadhar", document.getElementById("AADHARID").value);
+    params.append("offemail", document.getElementById("OFFEMID").value);
+    params.append("peremail", document.getElementById("PEREMID").value);
+    params.append("preaddr", document.getElementById("PREADDRID").value);
+    params.append("peraddr", document.getElementById("PERADDRID").value);
+
+    console.log("Inserted");
+    axios.post("http://localhost:5000/studentinsert", params);
+  }
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
@@ -50,19 +78,552 @@ function GeneralInformationdata() {
           <CardBody>
             <Table variant="simple" color={textColor}>
               <Tbody>
-                {GeneralParticulars.map((row) => {
-                  return (
-                    <GeneralParticularstablerow
-                      field={row.field}
-                      data={row.data}
+              <Tr>
+                <Td minWidth={{ sm: "17rem" }}>
+                  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+                    <Flex direction="column">
+                      <Text
+                        fontSize="md"
+                        color={textColor}
+                        fontWeight="bold"
+                        minWidth="100%"
+                      >STUDENT NAME:
+                      </Text>
+                    </Flex>
+                  </Flex>
+                </Td>
+                <Td minWidth={{ sm: "17rem" }}>
+                  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+                    <Flex direction="column">
+                      <FormControl>
+                        <Input
+                          id="NID"
+                          borderRadius="5px"
+                          fontSize="sm"
+                          type="text"
+                          placeholder="Enter your name"
+                        />
+                      </FormControl>
+                    </Flex>
+                  </Flex>
+                </Td>
+              </Tr>
+              <Tr>
+              <Td minWidth={{ sm: "17rem" }}>
+                <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+                  <Flex direction="column">
+                    <Text
+                      fontSize="md"
+                      color={textColor}
+                      fontWeight="bold"
+                      minWidth="100%"
+                    >ROLL NO:
+                    </Text>
+                  </Flex>
+                </Flex>
+              </Td>
+              <Td minWidth={{ sm: "17rem" }}>
+                <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+                  <Flex direction="column">
+                    <FormControl>
+                      <Input
+                        id="RID"
+                        borderRadius="5px"
+                        fontSize="sm"
+                        type="text"
+                        placeholder="Enter your roll no"
+                      />
+                    </FormControl>
+                  </Flex>
+                </Flex>
+              </Td>
+            </Tr>
+            <Tr>
+            <Td minWidth={{ sm: "17rem" }}>
+              <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+                <Flex direction="column">
+                  <Text
+                    fontSize="md"
+                    color={textColor}
+                    fontWeight="bold"
+                    minWidth="100%"
+                  >REGISTER NO:
+                  </Text>
+                </Flex>
+              </Flex>
+            </Td>
+            <Td minWidth={{ sm: "17rem" }}>
+              <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+                <Flex direction="column">
+                  <FormControl>
+                    <Input
+                      id="REID"
+                      borderRadius="5px"
+                      fontSize="sm"
+                      type="text"
+                      placeholder="Enter your register no"
                     />
-                  );
-                })}
+                  </FormControl>
+                </Flex>
+              </Flex>
+            </Td>
+          </Tr>
+          <Tr>
+          <Td minWidth={{ sm: "17rem" }}>
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Flex direction="column">
+                <Text
+                  fontSize="md"
+                  color={textColor}
+                  fontWeight="bold"
+                  minWidth="100%"
+                >SEX:
+                </Text>
+              </Flex>
+            </Flex>
+          </Td>
+          <Td minWidth={{ sm: "17rem" }}>
+            <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+              <Flex direction="column">
+                <FormControl>
+                  <Input
+                    id="SID"
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Enter your gender"
+                  />
+                </FormControl>
+              </Flex>
+            </Flex>
+          </Td>
+        </Tr>
+        <Tr>
+        <Td minWidth={{ sm: "17rem" }}>
+          <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+            <Flex direction="column">
+              <Text
+                fontSize="md"
+                color={textColor}
+                fontWeight="bold"
+                minWidth="100%"
+              >DATE OF BIRTH:
+              </Text>
+            </Flex>
+          </Flex>
+        </Td>
+        <Td minWidth={{ sm: "17rem" }}>
+          <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+            <Flex direction="column">
+              <FormControl>
+                <Input
+                  id="DOBID"
+                  borderRadius="5px"
+                  fontSize="sm"
+                  type="text"
+                  placeholder="Enter your date of birth"
+                />
+              </FormControl>
+            </Flex>
+          </Flex>
+        </Td>
+      </Tr>
+      <Tr>
+      <Td minWidth={{ sm: "17rem" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Flex direction="column">
+            <Text
+              fontSize="md"
+              color={textColor}
+              fontWeight="bold"
+              minWidth="100%"
+            >NATIONALITY:
+            </Text>
+          </Flex>
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "17rem" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Flex direction="column">
+            <FormControl>
+              <Input
+                id="NATIONID"
+                borderRadius="5px"
+                fontSize="sm"
+                type="text"
+                placeholder="Enter your nationality"
+              />
+            </FormControl>
+          </Flex>
+        </Flex>
+      </Td>
+    </Tr>
+  <Tr>
+  <Td minWidth={{ sm: "17rem" }}>
+    <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+      <Flex direction="column">
+        <Text
+          fontSize="md"
+          color={textColor}
+          fontWeight="bold"
+          minWidth="100%"
+        >RELIGION:
+        </Text>
+      </Flex>
+    </Flex>
+  </Td>
+  <Td minWidth={{ sm: "17rem" }}>
+    <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+      <Flex direction="column">
+        <FormControl>
+          <Input
+            id="RELIGIONID"
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder="Enter your religion"
+          />
+        </FormControl>
+      </Flex>
+    </Flex>
+  </Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >IF CATHOLIC, PARISH ?:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="PARISHID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter yes/no"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >DALIT CATHOLIC:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="DALITID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter yes/no"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >COMMUNITY:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="COMMUNITYID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your community"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >BLOOD GROUP:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="BLOODID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your blood group"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >MOTHER TOUNGE:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="MOTHERID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your mother tounge"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >CONTACT NUMBER:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="CONTACTID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your contact no."
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >AADHAR NO:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="AADHARID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your aadhar no."
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >OFFICIAL EMAIL ID:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="OFFEMID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your official email"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >PERSONAL EMAIL ID:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="PEREMID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your personal email"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >PRESENT ADDRESS:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="PREADDRID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your present address"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+<Tr>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <Text
+        fontSize="md"
+        color={textColor}
+        fontWeight="bold"
+        minWidth="100%"
+      >PERMANENT ADDRESS:
+      </Text>
+    </Flex>
+  </Flex>
+</Td>
+<Td minWidth={{ sm: "17rem" }}>
+  <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+    <Flex direction="column">
+      <FormControl>
+        <Input
+          id="PERADDRID"
+          borderRadius="5px"
+          fontSize="sm"
+          type="text"
+          placeholder="Enter your Permanent address"
+        />
+      </FormControl>
+    </Flex>
+  </Flex>
+</Td>
+</Tr>
+
               </Tbody>
             </Table>
           </CardBody>
           <Flex direction="column" align="flex-end" w="100%">
-            <Button
+            <Button onClick={funinsert}
               marginBottom="1rem"
               marginTop="1rem"
               marginRight="22.5rem"
