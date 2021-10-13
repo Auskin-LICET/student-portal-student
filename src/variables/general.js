@@ -10,6 +10,7 @@ import {
   Tr,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 export const tablesTableData1 = [
   {
     sno: "1",
@@ -136,803 +137,599 @@ export const tablesTableData4 = [
 export const GeneralParticulars = [
   {
     field: "Student Name",
-    data: 
-    <Input
-      borderRadius="5px"
-      fontSize="sm"
-      type="text"
-      placeholder="Student Name "
-    />,
+    data: (
+      <Input
+        borderRadius="5px"
+        fontSize="sm"
+        type="text"
+        placeholder="Student Name "
+      />
+    ),
+    show: "Null",
   },
   {
     field: "ID",
-    data:     <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder="ID "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder="ID " />
+    ),
+    show: "Null",
   },
   {
     field: "Register No.",
-    data:    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder="Register Number  "
-  />,
+    data: (
+      <Input
+        borderRadius="5px"
+        fontSize="sm"
+        type="text"
+        placeholder="Register Number  "
+      />
+    ),
+    show: "Null",
   },
   {
     field: "Sex",
-    data:     <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder="Male / Female "
-  />,
+    data: (
+      <Input
+        borderRadius="5px"
+        fontSize="sm"
+        type="text"
+        placeholder="Male / Female "
+      />
+    ),
+    show: "Null",
   },
   {
     field: "Date Of Birth",
-    data:     <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder="DD / MM / YYYY "
-  />,
+    data: (
+      <Input
+        borderRadius="5px"
+        fontSize="sm"
+        type="text"
+        placeholder="DD / MM / YYYY "
+      />
+    ),
+    show: "Null",
   },
   {
     field: "Nationality",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder="Nationality "
-  />,
+    data: (
+      <Input
+        borderRadius="5px"
+        fontSize="sm"
+        type="text"
+        placeholder="Nationality "
+      />
+    ),
+    show: "Null",
   },
   {
     field: "Religion",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder="Religion "
-  />,
+    data: (
+      <Input
+        borderRadius="5px"
+        fontSize="sm"
+        type="text"
+        placeholder="Religion "
+      />
+    ),
+    show: "Null",
   },
   {
     field: "If Catholic, Parish?",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Dalit Catholic",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Comunity",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Blood Group",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Mother Tounge",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Contact Number",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Aadhar No.",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Official Email ID",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Personal Email ID",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Present Address",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Permanent Address",
-    data:     
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
 ];
 export const HigherSecondaryDetails = [
   {
     field: "Name of the School",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Board",
-    data: 
-    <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Medium Of Instruction",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Second Language",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Group",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Total Marks",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Overall Percentage",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Cut-Off Marks",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "No. Of Attempts",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
 ];
 export const SecondaryDetails = [
   {
     field: "Name of the School",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Board",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Medium Of Instruction",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Second Language",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Group",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Total Marks",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Overall Percentage",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "Cut-Off Marks",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
   {
     field: "No. Of Attempts",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
+    show: "Null",
   },
 ];
 export const Father = [
   {
     field: "Father's Name",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Father's Qualification",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Fathers Occupation",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Father's Office Address",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Father's Annual Income",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Father's Mobile No.",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Father's Email ID",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Name",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Qualification",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Occupation",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Office Address",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Annual Income",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Mobile No.",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Guardian Email ID",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const Mother = [
   {
     field: "Mother's Name",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Mother's Qualification",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Mother's Occupation",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Mother's Office Address",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Mother's Annual Income",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Mother's Mobile No.",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Mother's Email ID",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "No. Of Siblings",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Qualification Of Siblings",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Occupation",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Alumni Of LICET Or LOYOLA",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const AdmissionDetails = [
   {
     field: "Application No.",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Date Of Admission",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Quota",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Regular / Lateral Entry",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Day Scholar / Hosteller",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const ScholarshipDetails = [
   {
     field: "Scholarship Name",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Scholarship Amount",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "First Graduate",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Economically Backward (Annual Income Of Parents Less than 1LPA)",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const TechnicalSkills = [
   {
     field: "Programming Languages",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Operating Systems",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "DataBase",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Software Profficieny",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Other Skills",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const NonTechnicalSkills = [
   {
     field: "Aptitude / Analytical Skills",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Communication Skills",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Social Media Exposure",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Leadership Skills",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Other Interpersonal Skills",
-    data:<Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const Goals = [
   {
     field: "Short Term Goals",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Long Term Goals",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const ProfessionalMembership = [
   {
     field: "Name",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Membership No.",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
   {
     field: "Duration",
-    data: <Input
-    borderRadius="5px"
-    fontSize="sm"
-    type="text"
-    placeholder=" "
-  />,
+    data: (
+      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
+    ),
   },
 ];
 export const Academicinfo = [

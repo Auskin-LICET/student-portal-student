@@ -13,7 +13,7 @@ import {
 import React from "react";
 
 function GeneralParticularstablerow(props) {
-  const { field, data } = props;
+  const { field, data, show } = props;
   const textColor = useColorModeValue("gray.700", "white");
   const bgStatus = useColorModeValue("gray.400", "#1a202c");
   const colorStatus = useColorModeValue("white", "gray.400");
@@ -45,6 +45,7 @@ function GeneralParticularstablerow(props) {
                 placeholder={field}
               /> */}
               {data}
+              {show}
             </FormControl>
           </Flex>
         </Flex>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Chakra imports
 import {
   Flex,
@@ -37,6 +37,7 @@ import { ProfessionalMembership } from "variables/general";
 
 function GeneralInformationdata() {
   const textColor = useColorModeValue("gray.700", "white");
+  const [show1, setShow1] = useState("ture");
 
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
@@ -48,21 +49,38 @@ function GeneralInformationdata() {
             </Text>
           </CardHeader>
           <CardBody>
-            <Table variant="simple" color={textColor}>
-              <Tbody>
-                {GeneralParticulars.map((row) => {
-                  return (
-                    <GeneralParticularstablerow
-                      field={row.field}
-                      data={row.data}
-                    />
-                  );
-                })}
-              </Tbody>
-            </Table>
+            {show1 ? (
+              <Table variant="simple" color={textColor}>
+                <Tbody>
+                  {GeneralParticulars.map((row) => {
+                    return (
+                      <GeneralParticularstablerow
+                        field={row.field}
+                        data={row.data}
+                      />
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            ) : (
+              <Table variant="simple" color={textColor}>
+                <Tbody>
+                  {GeneralParticulars.map((row) => {
+                    return (
+                      <GeneralParticularstablerow
+                        field={row.field}
+                        show={row.show}
+                      />
+                    );
+                  })}
+                </Tbody>
+              </Table>
+            )}
           </CardBody>
+
           <Flex direction="column" align="flex-end" w="100%">
             <Button
+              onClick={() => setShow1(false)}
               marginBottom="1rem"
               marginTop="1rem"
               marginRight="22.5rem"
