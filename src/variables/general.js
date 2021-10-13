@@ -1,16 +1,3 @@
-import {
-  Avatar,
-  Badge,
-  Button,
-  Flex,
-  FormControl,
-  Input,
-  Td,
-  Text,
-  Tr,
-  useColorModeValue,
-} from "@chakra-ui/react";
-
 export const tablesTableData1 = [
   {
     sno: "1",
@@ -137,599 +124,363 @@ export const tablesTableData4 = [
 export const GeneralParticulars = [
   {
     field: "Student Name",
-    data: (
-      <Input
-        borderRadius="5px"
-        fontSize="sm"
-        type="text"
-        placeholder="Student Name "
-      />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "ID",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder="ID " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Register No.",
-    data: (
-      <Input
-        borderRadius="5px"
-        fontSize="sm"
-        type="text"
-        placeholder="Register Number  "
-      />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Sex",
-    data: (
-      <Input
-        borderRadius="5px"
-        fontSize="sm"
-        type="text"
-        placeholder="Male / Female "
-      />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Date Of Birth",
-    data: (
-      <Input
-        borderRadius="5px"
-        fontSize="sm"
-        type="text"
-        placeholder="DD / MM / YYYY "
-      />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Nationality",
-    data: (
-      <Input
-        borderRadius="5px"
-        fontSize="sm"
-        type="text"
-        placeholder="Nationality "
-      />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Religion",
-    data: (
-      <Input
-        borderRadius="5px"
-        fontSize="sm"
-        type="text"
-        placeholder="Religion "
-      />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "If Catholic, Parish?",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Dalit Catholic",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Comunity",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Blood Group",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Mother Tounge",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Contact Number",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Aadhar No.",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Official Email ID",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Personal Email ID",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Present Address",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Permanent Address",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
 ];
 export const HigherSecondaryDetails = [
   {
     field: "Name of the School",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Board",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Medium Of Instruction",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Second Language",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Group",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Total Marks",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Overall Percentage",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Cut-Off Marks",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "No. Of Attempts",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
 ];
 export const SecondaryDetails = [
   {
     field: "Name of the School",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Board",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Medium Of Instruction",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Second Language",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Group",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Total Marks",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Overall Percentage",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "Cut-Off Marks",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
   {
     field: "No. Of Attempts",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
-    show: "Null",
+    data: "NULL",
   },
 ];
 export const Father = [
   {
     field: "Father's Name",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Father's Qualification",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Fathers Occupation",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Father's Office Address",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Father's Annual Income",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Father's Mobile No.",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Father's Email ID",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Name",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Qualification",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Occupation",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Office Address",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Annual Income",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Mobile No.",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Guardian Email ID",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const Mother = [
   {
     field: "Mother's Name",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Mother's Qualification",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Mother's Occupation",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Mother's Office Address",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Mother's Annual Income",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Mother's Mobile No.",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Mother's Email ID",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "No. Of Siblings",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Qualification Of Siblings",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Occupation",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Alumni Of LICET Or LOYOLA",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const AdmissionDetails = [
   {
     field: "Application No.",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Date Of Admission",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Quota",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Regular / Lateral Entry",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Day Scholar / Hosteller",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const ScholarshipDetails = [
   {
     field: "Scholarship Name",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Scholarship Amount",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "First Graduate",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Economically Backward (Annual Income Of Parents Less than 1LPA)",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const TechnicalSkills = [
   {
     field: "Programming Languages",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Operating Systems",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "DataBase",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Software Profficieny",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Other Skills",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const NonTechnicalSkills = [
   {
     field: "Aptitude / Analytical Skills",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Communication Skills",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Social Media Exposure",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Leadership Skills",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Other Interpersonal Skills",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const Goals = [
   {
     field: "Short Term Goals",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Long Term Goals",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const ProfessionalMembership = [
   {
     field: "Name",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Membership No.",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
   {
     field: "Duration",
-    data: (
-      <Input borderRadius="5px" fontSize="sm" type="text" placeholder=" " />
-    ),
+    data: "NULL",
   },
 ];
 export const Academicinfo = [
