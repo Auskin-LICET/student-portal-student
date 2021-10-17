@@ -40,6 +40,10 @@ import { ProfessionalMembership } from "variables/general";
 
 function GeneralInformationdata() {
 
+  function logout(){
+    window.location.href=("http://localhost:3000/purity-ui-dashboard#/auth/SignIn");
+  }
+
   function funinsert(){
     let params = new URLSearchParams();
     params.append("name", document.getElementById("NID").value);
@@ -61,14 +65,24 @@ function GeneralInformationdata() {
     params.append("preaddr", document.getElementById("PREADDRID").value);
     params.append("peraddr", document.getElementById("PERADDRID").value);
 
-    console.log("Inserted");
-    //axios.post("http://localhost:5000/studentinsert", params);
+    axios.post("http://localhost:5000/insertroll", params);
+    axios.post("http://localhost:5000/studentinsert", params);
     window.location.href=("http://localhost:3000/purity-ui-dashboard#/admin/dashboard");
   }
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
-    <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
+    <Flex direction="column" p="0rem 2rem 0rem 2rem">
+    <Button onClick={logout}
+            marginBottom="1rem"
+            marginTop="1rem"
+            marginRight="1rem"
+            colorScheme="orange"
+            variant="solid"
+            alignSelf="flex-end"
+    >
+      log out
+    </Button>
       <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={4}>
         <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
           <CardHeader p="6px 0px 22px 0px">
@@ -622,17 +636,6 @@ function GeneralInformationdata() {
 </Tbody>
 </Table>
 </CardBody>
-<Flex direction="column" align="flex-end" w="100%">
-    <Button onClick={funinsert}
-            marginBottom="1rem"
-            marginTop="1rem"
-            marginRight="22.5rem"
-            colorScheme="orange"
-            variant="solid"
-    >
-      Submit
-    </Button>
-    </Flex>
     </Card>
         <SimpleGrid columns={{ sm: 1, md: 2, xl: 2 }} gap={4}>
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -655,17 +658,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -688,17 +680,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -721,17 +702,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
             <CardHeader p="6px 0px 22px 0px">
@@ -753,17 +723,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -786,17 +745,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -819,17 +767,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -852,17 +789,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -885,17 +811,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -918,17 +833,6 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
 
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
@@ -951,20 +855,20 @@ function GeneralInformationdata() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Flex direction="column" align="flex-end" w="100%">
-              <Button
-                marginBottom="1rem"
-                marginTop="1rem"
-                marginRight="3.5rem"
-                colorScheme="orange"
-                variant="solid"
-              >
-                Submit
-              </Button>
-            </Flex>
           </Card>
         </SimpleGrid>
       </SimpleGrid>
+      <Button onClick={funinsert}
+              alignSelf="center"
+              marginBottom="1rem"
+              marginTop="1rem"
+              marginRight="1rem"
+              width="30%"
+              colorScheme="orange"
+              variant="solid"
+      >
+        Submit
+      </Button>
     </Flex>
   );
 }
