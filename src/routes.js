@@ -50,7 +50,7 @@ var dashRoutes = [
   },
 
   {
-    path: "/GeneralInformationdata",
+    path: "/GeneralInformation",
     name: (
       <p
         style={{
@@ -64,7 +64,7 @@ var dashRoutes = [
       </p>
     ),
     icon: <StatsIcon color="inherit" />,
-    component: GeneralInformationdata,
+    component: GeneralInformation,
     layout: "/admin",
   },
 
@@ -173,17 +173,17 @@ var dashRoutes = [
         layout: "/admin",
       },
       {
+        path: "/GeneralInformationdata",
+        name: "General",
+        icon: <PersonIcon color="inherit" />,
+        component: GeneralInformationdata,
+        layout: "/auth",
+      },
+      {
         path: "/signin",
         name: "Sign Out",
         icon: <DocumentIcon color="inherit" />,
         component: SignIn,
-        layout: "/auth",
-      },
-      {
-        path: "/GeneralInformationdata",
-        name: "Genaral",
-        icon: <PersonIcon color="inherit" />,
-        component: GeneralInformationdata,
         layout: "/auth",
       },
     ],

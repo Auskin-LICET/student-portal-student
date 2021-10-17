@@ -37,10 +37,10 @@ export default function handleLogin() {
         console.log("Logged In");
         var check = result.data[0];
         if(check.roll_no==null){
-          window.location.href="http://localhost:3000/purity-ui-dashboard#/auth/GeneralInformationdata";
+          window.location.href="http://localhost:3000/public/Template/academic_details.xlsx#/auth/GeneralInformationdata";
         }
         else {
-          window.location.href="http://localhost:3000/purity-ui-dashboard#/admin/dashboard";
+          window.location.href="http://localhost:3000/public/Template/academic_details.xlsx#/admin/dashboard";
         }
         localStorage.setItem("email", result.data[0].email);
         localStorage.setItem("auth_token", result.data[0].auth_token);
