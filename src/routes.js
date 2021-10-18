@@ -33,8 +33,8 @@ import {
   Text,
   Tr,
   useColorModeValue,
+  isDisabled,
 } from "@chakra-ui/react";
-
 
 //function nfunction(){
 //  console.log("HELLO");
