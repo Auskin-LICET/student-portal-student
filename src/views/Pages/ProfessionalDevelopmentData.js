@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Chakra imports
 import {
   Flex,
@@ -26,7 +26,7 @@ import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import ProfessionalDevelopmenttablerow from "components/Tables/ProfessionalDevelopmentTablerow";
-import { IndustrialVist } from "variables/general";
+// import { IndustrialVist } from "variables/general";
 import { InplantTraining } from "variables/general";
 import { GuestLecture } from "variables/general";
 import { MotivationalTalks } from "variables/general";
@@ -42,6 +42,27 @@ import { Publications } from "variables/general";
 
 function ProfessionalDevelopmentData() {
   const textColor = useColorModeValue("gray.700", "white");
+  const [IndustrialVist, SetIndustrialVist] = useState([
+    {
+      row1: "NULL",
+      row2: "NULL",
+      row3: "NULL",
+    },
+    {
+      row1: "NULL",
+      row2: "NULL",
+      row3: "NULL",
+    },
+    ])
+   const data={
+    row1: "NULL",
+    row2: "NULL",
+    row3: "NULL",
+  }
+  const adddata=() =>{  
+  SetIndustrialVist([...IndustrialVist,data])
+  }
+
 
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
@@ -80,7 +101,7 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+            <Button bg="orange.300" alignSelf="flex-end" width="fit-content" onClick={adddata}>
               <AddIcon w={4} h={4} me="3" />
               Add
             </Button>
