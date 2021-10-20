@@ -39,30 +39,26 @@ import { PlacementTraining } from "variables/general";
 import { MiniProject } from "variables/general";
 import { FinalProject } from "variables/general";
 import { Publications } from "variables/general";
+import TableRow5 from "components/Tables/TableRow5";
 
 function ProfessionalDevelopmentData() {
   const textColor = useColorModeValue("gray.700", "white");
-  const [IndustrialVist, SetIndustrialVist] = useState([
-    {
-      row1: "NULL",
-      row2: "NULL",
-      row3: "NULL",
-    },
-    {
-      row1: "NULL",
-      row2: "NULL",
-      row3: "NULL",
-    },
-    ])
-   const data={
+  const FirstRow = {
     row1: "NULL",
     row2: "NULL",
     row3: "NULL",
-  }
-  const adddata=() =>{  
-  SetIndustrialVist([...IndustrialVist,data])
-  }
+  };
+  const data = {
+    row1: "NULL",
+    row2: "NULL",
+    row3: "NULL",
+  };
 
+  const [IndustrialVist, SetIndustrialVist] = useState([FirstRow]);
+
+  const adddata = () => {
+    SetIndustrialVist([...IndustrialVist, data]);
+  };
 
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
@@ -101,7 +97,12 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Button bg="orange.300" alignSelf="flex-end" width="fit-content" onClick={adddata}>
+            <Button
+              bg="orange.300"
+              alignSelf="flex-end"
+              width="fit-content"
+              onClick={adddata}
+            >
               <AddIcon w={4} h={4} me="3" />
               Add
             </Button>
@@ -136,7 +137,12 @@ function ProfessionalDevelopmentData() {
                 </Tbody>
               </Table>
             </CardBody>
-            <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+            <Button
+              bg="orange.300"
+              alignSelf="flex-end"
+              width="fit-content"
+              onClick={adddata}
+            >
               <AddIcon w={4} h={4} me="3" />
               Add
             </Button>
@@ -166,7 +172,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -203,7 +209,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -240,7 +246,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -277,7 +283,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -314,7 +320,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -351,7 +357,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -390,7 +396,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -427,7 +433,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -464,7 +470,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -501,7 +507,7 @@ function ProfessionalDevelopmentData() {
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        row4={row.row4}
+                        // row4={row.row4}
                       />
                     );
                   })}
@@ -535,7 +541,7 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {Publications.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow5
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
