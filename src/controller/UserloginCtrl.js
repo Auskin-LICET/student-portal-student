@@ -40,6 +40,7 @@ export default function handleLogin() {
           window.location.href="http://localhost:3000/purity-ui-dashboard#/auth/GeneralInformationdata";
         }
         else {
+          localStorage.setItem("StudentRoll", check.roll_no);
           window.location.href="http://localhost:3000/purity-ui-dashboard#/admin/dashboard";
         }
         localStorage.setItem("email", result.data[0].email);
