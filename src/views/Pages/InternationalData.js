@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 // Chakra imports
 import {
   Flex,
@@ -32,6 +33,18 @@ import InternationalTableRow from "components/Tables/InternationalTableRow";
 import { International } from "variables/general";
 
 function InternationalData() {
+  function substudinter(){
+    console.log("HELLO");
+    let params = new URLSearchParams();
+    params.append("Campus", document.getElementById("CampusID").value);
+    params.append("DateYear", document.getElementById("DYID").value);
+    params.append("Project", document.getElementById("ProjectID").value);
+    params.append("Outcome", document.getElementById("OutcomeID").value);
+    params.append("PersD", document.getElementById("PDID").value);
+    params.append("ForLCC", document.getElementById("FLCCID").value);
+    params.append("StudentDetails",localStorage.getItem("StudentRoll"));
+    axios.post("http://localhost:5000/insertstudinter", params);
+  }
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
@@ -55,6 +68,7 @@ function InternationalData() {
                   <Th color="gray.400">
                     Foreign Language Courses Completed or Pursuing
                   </Th>
+                  <Th color="gray.400">Submit Details</Th>
                 </Tr>
               </Thead>
 
@@ -68,6 +82,7 @@ function InternationalData() {
               fontSize="sm"
               type="text"
               placeholder="Enter Campus"
+              id = "CampusID"
             />
           </Flex>
         </Flex>
@@ -79,6 +94,7 @@ function InternationalData() {
             fontSize="sm"
             type="text"
             placeholder="Enter Date and Year"
+            id = "DYID"
           />
         </Flex>
       </Td>
@@ -89,6 +105,7 @@ function InternationalData() {
             fontSize="sm"
             type="text"
             placeholder="Project"
+            id = "ProjectID"
           />
         </Flex>
       </Td>
@@ -99,6 +116,7 @@ function InternationalData() {
             fontSize="sm"
             type="text"
             placeholder="Outcome"
+            id = "OutcomeID"
           />
         </Flex>
       </Td>
@@ -109,6 +127,7 @@ function InternationalData() {
             fontSize="sm"
             type="text"
             placeholder="Personal Development"
+            id = "PDID"
           />
         </Flex>
       </Td>
@@ -119,15 +138,21 @@ function InternationalData() {
             fontSize="sm"
             type="text"
             placeholder="Foreign Language Courses Completed or Pursuing"
+            id = "FLCCID"
           />
         </Flex>
       </Td>
+      <Td>
+      <Button onClick={substudinter} bg="orange.300" alignSelf="flex-end" width="fit-content">
+            Submit
+          </Button>
+    </Td>
     </Tr>
        </Tbody>
         </Table>
           </CardBody>
 
-          <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
+          <Button bg="orange.300" alignSelf="flex" width="fit-content">
             <AddIcon w={4} h={4} me="3" />
             Add
           </Button>
