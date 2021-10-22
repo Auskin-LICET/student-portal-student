@@ -8,6 +8,8 @@ import {
   Th,
   Thead,
   Tr,
+  Td,
+  Input,
   useColorModeValue,
   Stat,
   StatLabel,
@@ -57,20 +59,72 @@ function InternationalData() {
               </Thead>
 
               <Tbody>
-                {International.map((row) => {
-                  return (
-                    <InternationalTableRow
-                      row1={row.row1}
-                      row2={row.row2}
-                      row3={row.row3}
-                      row4={row.row4}
-                      row5={row.row5}
-                      row6={row.row6}
-                    />
-                  );
-                })}
-              </Tbody>
-            </Table>
+              <Tr>
+      <Td minWidth={{ sm: "180px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Flex direction="column">
+            <Input
+              borderRadius="5px"
+              fontSize="sm"
+              type="text"
+              placeholder="Enter Campus"
+            />
+          </Flex>
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "180px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder="Enter Date and Year"
+          />
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "180px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder="Project"
+          />
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "180px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder="Outcome"
+          />
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "180px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder="Personal Development"
+          />
+        </Flex>
+      </Td>
+      <Td minWidth={{ sm: "180px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <Input
+            borderRadius="5px"
+            fontSize="sm"
+            type="text"
+            placeholder="Foreign Language Courses Completed or Pursuing"
+          />
+        </Flex>
+      </Td>
+    </Tr>
+       </Tbody>
+        </Table>
           </CardBody>
 
           <Button bg="orange.300" alignSelf="flex-end" width="fit-content">
