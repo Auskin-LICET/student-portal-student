@@ -70,6 +70,9 @@ function InternationalData() {
   const textColor = useColorModeValue("gray.700", "white");
   const [data, setData] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const refresh = () => {
+    window.location.href="http://localhost:3000/purity-ui-dashboard#/admin/InternationalData";
+  }
 
   let params = new URLSearchParams();
   params.append("StudentDetails", localStorage.getItem("StudentRoll"));
@@ -243,11 +246,11 @@ function InternationalData() {
                         <ModalBody>{resul}</ModalBody>
 
                         <ModalFooter>
-                          <Button colorScheme="blue" mr={3} onClick={onClose}>
+                          <Button colorScheme="blue" mr={3} onClick={()=>{onClose();window.location.reload(false)}}>
                             Close
                           </Button>
                         </ModalFooter>
-                      </ModalContent>
+                      </ModalContent> 
                     </Modal>
                   </Td>
                 </Tr>
