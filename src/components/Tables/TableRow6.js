@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-function TableRow5(props) {
+function TableRow6(props) {
   const { row1, row2, row3, row4, row5, row6 } = props;
   const textColor = useColorModeValue("gray.700", "white");
   const bgStatus = useColorModeValue("gray.400", "#1a202c");
@@ -71,4 +71,4 @@ function TableRow5(props) {
   );
 }
 
-export default TableRow5;
+export default TableRow6;

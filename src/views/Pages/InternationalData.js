@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import axios from "axios";
 // Chakra imports
 import {
@@ -31,6 +31,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import InternationalTableRow from "components/Tables/InternationalTableRow";
 import { International } from "variables/general";
+import TableRow6 from "components/Tables/TableRow6";
 
 function InternationalData() {
   function substudinter(){
@@ -46,6 +47,15 @@ function InternationalData() {
     axios.post("http://localhost:5000/insertstudinter", params);
   }
   const textColor = useColorModeValue("gray.700", "white");
+  const [data, setData] = useState([]);
+
+  let params = new URLSearchParams();
+  params.append("Internexroll", localStorage.getItem("International"));
+  useEffect(async () => {
+    axios.post("http://localhost:5000/InternationalExposure",params).then((items) => {
+      setData(items.data);
+    });
+  });
 
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
@@ -158,7 +168,53 @@ function InternationalData() {
           </Button>
         </Card>
       </SimpleGrid>
+      <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
+      <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
+        <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
+          <CardHeader p="6px 0px 22px 0px">
+            <Text fontSize="xl" color={textColor} fontWeight="bold">
+              Summer Program Details
+            </Text>
+          </CardHeader>
+          <CardBody>
+            <Table variant="simple" color={textColor}>
+              <Thead>
+                <Tr my=".8rem" pl="0px" color="gray.400">
+                  <Th color="gray.400">Campus</Th>
+                  <Th color="gray.400">Date and Year</Th>
+                  <Th color="gray.400">Project</Th>
+                  <Th color="gray.400">Outcome</Th>
+                  <Th color="gray.400">Personal Development</Th>
+                  <Th color="gray.400">
+                    Foreign Language Courses Completed or Pursuing
+                  </Th>
+                  <Th color="gray.400">Edit</Th>
+                  <Th color="gray.400">Delete</Th>
+                </Tr>
+              </Thead>
+
+              <Tbody>
+                {data.map((item) => {
+                  return (
+                    <TableRow6 id = {item.s_no}
+                      row1={item.foreign_campus}
+                      row2={item.duration}
+                      row3={item.project}
+                      row4={item.outcome}
+                      row5={item.personal_development}
+                      row6={item.foreign_language_courses}
+                    />
+                  );
+                })}
+              </Tbody>
+            </Table>
+          </CardBody>
+        </Card>
+      </SimpleGrid>
     </Flex>
+    </Flex>
+
+    
   );
 }
 
