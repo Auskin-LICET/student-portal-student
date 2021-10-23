@@ -238,7 +238,7 @@ function InternationalData() {
                     >
                       Submit
                     </Button>
-                    <Modal isOpen={isOpen} onClose={onClose}>
+                    <Modal isOpen={isOpen} onClose={()=>{onClose();window.location.reload(false)}}>
                       <ModalOverlay />
                       <ModalContent>
                         <ModalHeader>Result</ModalHeader>
