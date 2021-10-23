@@ -63,7 +63,7 @@ function InternationalData() {
         <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
-              Summer Program
+              Enter the Details of Summer Program
             </Text>
           </CardHeader>
           <CardBody>
