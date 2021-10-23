@@ -41,6 +41,8 @@ import InternationalTableRow from "components/Tables/InternationalTableRow";
 import { International } from "variables/general";
 import TableRow6 from "components/Tables/TableRow6";
 
+var resul;
+
 function InternationalData() {
   function substudinter(){
     console.log("HELLO");
@@ -52,8 +54,17 @@ function InternationalData() {
     params.append("PersD", document.getElementById("PDID").value);
     params.append("ForLCC", document.getElementById("FLCCID").value);
     params.append("StudentDetails",localStorage.getItem("StudentRoll"));
-    axios.post("http://localhost:5000/insertstudinter", params);
-    onOpen();
+    axios.post("http://localhost:5000/insertstudinter", params).then((items) => {    
+    if(items.data=="Inserted")
+    {
+      resul="Sucessfully Added!!";
+      onOpen(resul);
+    }
+    else if(items.data=="NotInserted"){
+      resul="Error Occured!!"
+      onOpen(resul);
+    }
+    });  
   }
   const textColor = useColorModeValue("gray.700", "white");
   const [data, setData] = useState([]);
@@ -169,18 +180,19 @@ function InternationalData() {
         <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>SUCCESS</ModalHeader>
+          <ModalHeader>Result</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <p>SUCCESSFULLY ADDED </p>
+            {resul}
           </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={()=>onClose()}>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>
         </ModalContent>
+
       </Modal>
     </Td>
     </Tr>
