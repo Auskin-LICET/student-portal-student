@@ -30,6 +30,7 @@ import {
   Select,
   Button,
   SimpleGrid,
+  Collapse,
 } from "@chakra-ui/react";
 
 import { AddIcon } from "@chakra-ui/icons";
@@ -77,10 +78,52 @@ function InternationalData() {
       setData(items.data);
     });
   });
+  const [show, setShow] = useState(false);
+  const handleToggle = () => setShow(!show);
 
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
       <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
+      <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
+          <CardHeader p="6px 0px 22px 0px">
+            <Text fontSize="xl" color={textColor} fontWeight="bold">
+              Summer Program Details
+            </Text>
+          </CardHeader>
+          <CardBody>
+            <Table variant="simple" color={textColor}>
+              <Thead>
+                <Tr my=".8rem" pl="0px" color="gray.400">
+                  <Th color="gray.400">Campus</Th>
+                  <Th color="gray.400">Date and Year</Th>
+                  <Th color="gray.400">Project</Th>
+                  <Th color="gray.400">Outcome</Th>
+                  <Th color="gray.400">Personal Development</Th>
+                  <Th color="gray.400">
+                    Foreign Language Courses Completed or Pursuing
+                  </Th>
+                </Tr>
+              </Thead>
+
+              <Tbody>
+                {data.map((item) => {
+                  return (
+                    <TableRow6 id = {item.s_no}
+                      row1={item.foreign_campus}
+                      row2={item.duration}
+                      row3={item.project}
+                      row4={item.outcome}
+                      row5={item.personal_development}
+                      row6={item.foreign_language_courses}
+                    />
+                  );
+                })}
+              </Tbody>
+            </Table>
+          </CardBody>
+        </Card>
+        
+            <Collapse in={show}>
         <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
@@ -199,45 +242,18 @@ function InternationalData() {
         </Table>
           </CardBody>
         </Card>
+        </Collapse>
+        <Button
+              bg="orange.300"
+              alignSelf="flex-end"
+              width="fit-content"
+              onClick={handleToggle}
+            >
+              <AddIcon w={4} h={4} me="3" />
+              Add
+            </Button>
 
-        <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
-          <CardHeader p="6px 0px 22px 0px">
-            <Text fontSize="xl" color={textColor} fontWeight="bold">
-              Summer Program Details
-            </Text>
-          </CardHeader>
-          <CardBody>
-            <Table variant="simple" color={textColor}>
-              <Thead>
-                <Tr my=".8rem" pl="0px" color="gray.400">
-                  <Th color="gray.400">Campus</Th>
-                  <Th color="gray.400">Date and Year</Th>
-                  <Th color="gray.400">Project</Th>
-                  <Th color="gray.400">Outcome</Th>
-                  <Th color="gray.400">Personal Development</Th>
-                  <Th color="gray.400">
-                    Foreign Language Courses Completed or Pursuing
-                  </Th>
-                </Tr>
-              </Thead>
-
-              <Tbody>
-                {data.map((item) => {
-                  return (
-                    <TableRow6 id = {item.s_no}
-                      row1={item.foreign_campus}
-                      row2={item.duration}
-                      row3={item.project}
-                      row4={item.outcome}
-                      row5={item.personal_development}
-                      row6={item.foreign_language_courses}
-                    />
-                  );
-                })}
-              </Tbody>
-            </Table>
-          </CardBody>
-        </Card>
+       
       </SimpleGrid>
     
     </Flex>
