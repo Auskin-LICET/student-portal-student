@@ -22,6 +22,14 @@ import {
   Select,
   Button,
   SimpleGrid,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure
 } from "@chakra-ui/react";
 
 import { AddIcon } from "@chakra-ui/icons";
@@ -45,9 +53,11 @@ function InternationalData() {
     params.append("ForLCC", document.getElementById("FLCCID").value);
     params.append("StudentDetails",localStorage.getItem("StudentRoll"));
     axios.post("http://localhost:5000/insertstudinter", params);
+    onOpen();
   }
   const textColor = useColorModeValue("gray.700", "white");
   const [data, setData] = useState([]);
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   let params = new URLSearchParams();
   params.append("Internexroll", localStorage.getItem("International"));
@@ -156,6 +166,22 @@ function InternationalData() {
       <Button onClick={substudinter} bg="orange.300" alignSelf="flex-end" width="fit-content">
             Submit
           </Button>
+        <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>SUCCESS</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <p>SUCCESSFULLY ADDED </p>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={()=>onClose()}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Td>
     </Tr>
        </Tbody>
