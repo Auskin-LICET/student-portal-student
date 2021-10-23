@@ -123,7 +123,7 @@ function InternationalData() {
           </CardBody>
         </Card>
         
-            <Collapse in={show}>
+            <Collapse in={show} animateOpacity>
         <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
