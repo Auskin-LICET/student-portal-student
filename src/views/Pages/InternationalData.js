@@ -161,15 +161,8 @@ function InternationalData() {
        </Tbody>
         </Table>
           </CardBody>
-
-          <Button bg="orange.300" alignSelf="flex" width="fit-content">
-            <AddIcon w={4} h={4} me="3" />
-            Add
-          </Button>
         </Card>
-      </SimpleGrid>
-      <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
-      <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
+
         <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
@@ -188,8 +181,6 @@ function InternationalData() {
                   <Th color="gray.400">
                     Foreign Language Courses Completed or Pursuing
                   </Th>
-                  <Th color="gray.400">Edit</Th>
-                  <Th color="gray.400">Delete</Th>
                 </Tr>
               </Thead>
 
@@ -211,7 +202,7 @@ function InternationalData() {
           </CardBody>
         </Card>
       </SimpleGrid>
-    </Flex>
+    
     </Flex>
 
     
