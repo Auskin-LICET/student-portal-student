@@ -86,7 +86,7 @@ function InternationalData() {
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
       <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
-        <Card overflowX={{ sm: "scroll"}}>
+        <Card overflowX={{ sm: "scroll" }}>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               Summer Program Details
@@ -128,7 +128,7 @@ function InternationalData() {
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
-                  <Td minWidth={{ sm: "180px" }}>
+                  <Td minWidth="12em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -146,7 +146,7 @@ function InternationalData() {
                       </Flex>
                     </Flex>
                   </Td>
-                  <Td minWidth={{ sm: "180px" }}>
+                  <Td minWidth="12em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -162,7 +162,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth={{ sm: "180px" }}>
+                  <Td minWidth="12em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -178,7 +178,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth={{ sm: "180px" }}>
+                  <Td minWidth="12em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -194,7 +194,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth={{ sm: "180px" }}>
+                  <Td minWidth="12em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -210,7 +210,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth={{ sm: "180px" }}>
+                  <Td minWidth="12em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -235,7 +235,13 @@ function InternationalData() {
                     >
                       Submit
                     </Button>
-                    <Modal isOpen={isOpen} onClose={()=>{onClose();window.location.reload(false)}}>
+                    <Modal
+                      isOpen={isOpen}
+                      onClose={() => {
+                        onClose();
+                        window.location.reload(false);
+                      }}
+                    >
                       <ModalOverlay />
                       <ModalContent>
                         <ModalHeader>Result</ModalHeader>
@@ -243,7 +249,14 @@ function InternationalData() {
                         <ModalBody>{resul}</ModalBody>
 
                         <ModalFooter>
-                          <Button colorScheme="blue" mr={3} onClick={()=>{onClose();window.location.reload(false)}}>
+                          <Button
+                            colorScheme="blue"
+                            mr={3}
+                            onClick={() => {
+                              onClose();
+                              window.location.reload(false);
+                            }}
+                          >
                             Close
                           </Button>
                         </ModalFooter>
