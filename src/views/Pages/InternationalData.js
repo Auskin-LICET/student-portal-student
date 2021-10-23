@@ -12,6 +12,14 @@ import {
   Td,
   Input,
   useColorModeValue,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
   Stat,
   StatLabel,
   Box,
@@ -22,14 +30,6 @@ import {
   Select,
   Button,
   SimpleGrid,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure
 } from "@chakra-ui/react";
 
 import { AddIcon } from "@chakra-ui/icons";
@@ -45,7 +45,6 @@ var resul;
 
 function InternationalData() {
   function substudinter(){
-    console.log("HELLO");
     let params = new URLSearchParams();
     params.append("Campus", document.getElementById("CampusID").value);
     params.append("DateYear", document.getElementById("DYID").value);
@@ -66,14 +65,15 @@ function InternationalData() {
     }
     });  
   }
+  
   const textColor = useColorModeValue("gray.700", "white");
   const [data, setData] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   let params = new URLSearchParams();
-  params.append("Internexroll", localStorage.getItem("International"));
+  params.append("StudentDetails",localStorage.getItem("StudentRoll"));
   useEffect(async () => {
-    axios.post("http://localhost:5000/InternationalExposure",params).then((items) => {
+    axios.post("http://localhost:5000/InternationalExposureStudent",params).then((items) => {
       setData(items.data);
     });
   });
@@ -177,7 +177,7 @@ function InternationalData() {
       <Button onClick={substudinter} bg="orange.300" alignSelf="flex-end" width="fit-content">
             Submit
           </Button>
-        <Modal isOpen={isOpen} onClose={onClose}>
+          <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Result</ModalHeader>
@@ -192,7 +192,6 @@ function InternationalData() {
             </Button>
           </ModalFooter>
         </ModalContent>
-
       </Modal>
     </Td>
     </Tr>
