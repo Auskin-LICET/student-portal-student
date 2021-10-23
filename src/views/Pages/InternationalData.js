@@ -70,9 +70,6 @@ function InternationalData() {
   const textColor = useColorModeValue("gray.700", "white");
   const [data, setData] = useState([]);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const refresh = () => {
-    window.location.href="http://localhost:3000/purity-ui-dashboard#/admin/InternationalData";
-  }
 
   let params = new URLSearchParams();
   params.append("StudentDetails", localStorage.getItem("StudentRoll"));
@@ -89,7 +86,7 @@ function InternationalData() {
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
       <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
-        <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
+        <Card overflowX={{ sm: "scroll"}}>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               Summer Program Details
@@ -250,7 +247,7 @@ function InternationalData() {
                             Close
                           </Button>
                         </ModalFooter>
-                      </ModalContent> 
+                      </ModalContent>
                     </Modal>
                   </Td>
                 </Tr>
@@ -261,7 +258,7 @@ function InternationalData() {
 
         <Button
           bg="orange.300"
-          alignSelf="flex-end"
+          marginLeft="auto"
           width="fit-content"
           onClick={handleToggle}
         >
