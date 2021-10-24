@@ -100,7 +100,7 @@ function ExtraCurricularData() {
               Clubs
             </Text>
           </CardHeader>
-          <CardBody overflowX={{ sm: "scroll", xl: "scroll" }}>
+          <CardBody overflowX={{ sm: "scroll" }}>
             <Table variant="simple" color={textColor}>
               <Thead>
                 <Tr my=".8rem" pl="0px" color="gray.400">
