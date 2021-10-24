@@ -31,6 +31,7 @@ import {
   Button,
   SimpleGrid,
   Collapse,
+  SlideFade,
 } from "@chakra-ui/react";
 
 import { AddIcon } from "@chakra-ui/icons";
@@ -271,11 +272,11 @@ function InternationalData() {
         gap={5}
       >
         <div>
-          <Collapse in={show}>
+          <SlideFade in={show}>
             <Button onClick={substudinter} bg="orange.300" width="fit-content">
               Submit
             </Button>
-          </Collapse>
+          </SlideFade>
         </div>
         <Button
           ms="5"
