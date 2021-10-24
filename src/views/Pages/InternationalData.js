@@ -226,15 +226,8 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
+
                   <Td>
-                    <Button
-                      onClick={substudinter}
-                      bg="orange.300"
-                      alignSelf="flex-end"
-                      width="fit-content"
-                    >
-                      Submit
-                    </Button>
                     <Modal
                       isOpen={isOpen}
                       onClose={() => {
@@ -268,10 +261,25 @@ function InternationalData() {
             </Table>
           </Collapse>
         </Card>
-
+      </SimpleGrid>
+      <SimpleGrid
+        alignSelf="flex-end"
+        mt="1rem"
+        width="10em"
+        me="2.5rem"
+        columns={{ sm: 2, md: 2, xl: 2 }}
+        gap={5}
+      >
+        <div>
+          <Collapse in={show}>
+            <Button onClick={substudinter} bg="orange.300" width="fit-content">
+              Submit
+            </Button>
+          </Collapse>
+        </div>
         <Button
+          ms="5"
           bg="orange.300"
-          marginLeft="auto"
           width="fit-content"
           onClick={handleToggle}
         >
