@@ -20,7 +20,7 @@ function TableRow4(props) {
 
   return (
     <Tr>
-      <Td minWidth={{ sm: "22em" }}>
+      <Td minWidth={{ sm: "20em" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
             <Text
@@ -34,19 +34,19 @@ function TableRow4(props) {
           </Flex>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "22em" }}>
+      <Td minWidth={{ sm: "20em" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">{row2}</Flex>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "22em" }}>
+      <Td minWidth={{ sm: "20em" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row3}</Flex>
           </FormControl>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "22em" }}>
+      <Td minWidth={{ sm: "20em" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row4}</Flex>

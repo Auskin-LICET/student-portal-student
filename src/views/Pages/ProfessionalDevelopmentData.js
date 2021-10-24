@@ -39,6 +39,8 @@ import { PlacementTraining } from "variables/general";
 import { MiniProject } from "variables/general";
 import { FinalProject } from "variables/general";
 import { Publications } from "variables/general";
+import TableRow3 from "components/Tables/TableRow3";
+import TableRow4 from "components/Tables/TableRow4";
 import TableRow5 from "components/Tables/TableRow5";
 
 function ProfessionalDevelopmentData() {
@@ -82,7 +84,7 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {IndustrialVist.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow3
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
@@ -122,7 +124,7 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {InplantTraining.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow3
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
@@ -163,11 +165,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {GuestLecture.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -200,11 +202,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {MotivationalTalks.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -237,11 +239,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {Internships.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -274,11 +276,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {ValueAddedCourse.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -311,11 +313,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {Workshop.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -348,11 +350,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {Webinar.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -387,11 +389,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {Competition.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -424,11 +426,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {PlacementTraining.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -461,11 +463,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {MiniProject.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}
@@ -498,11 +500,11 @@ function ProfessionalDevelopmentData() {
                 <Tbody>
                   {FinalProject.map((row) => {
                     return (
-                      <ProfessionalDevelopmenttablerow
+                      <TableRow4
                         row1={row.row1}
                         row2={row.row2}
                         row3={row.row3}
-                        // row4={row.row4}
+                        row4={row.row4}
                       />
                     );
                   })}

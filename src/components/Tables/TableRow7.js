@@ -13,14 +13,14 @@ import {
 import React from "react";
 
 function TableRow6(props) {
-  const { row1, row2, row3, row4, row5, row6 } = props;
+  const { row1, row2, row3, row4, row5, row6, row7 } = props;
   const textColor = useColorModeValue("gray.700", "white");
   const bgStatus = useColorModeValue("gray.400", "#1a202c");
   const colorStatus = useColorModeValue("white", "gray.400");
 
   return (
     <Tr>
-      <Td minWidth={{ sm: "12em" }}>
+      <Td minWidth="12em">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
             <Text
@@ -34,36 +34,43 @@ function TableRow6(props) {
           </Flex>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "12em" }}>
+      <Td minWidth="12em">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">{row2}</Flex>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "12em" }}>
+      <Td minWidth="12em">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row3}</Flex>
           </FormControl>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "12em" }}>
+      <Td minWidth="12em">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row4}</Flex>
           </FormControl>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "12em" }}>
+      <Td minWidth="12em">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row5}</Flex>
           </FormControl>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "12em" }}>
+      <Td minWidth="12em">
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row6}</Flex>
+          </FormControl>
+        </Flex>
+      </Td>
+      <Td minWidth="12em">
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <FormControl>
+            <Flex direction="column">{row7}</Flex>
           </FormControl>
         </Flex>
       </Td>
