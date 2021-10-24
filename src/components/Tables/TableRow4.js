@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-function TableRow5(props) {
+function TableRow4(props) {
   const { row1, row2, row3, row4 } = props;
   const textColor = useColorModeValue("gray.700", "white");
   const bgStatus = useColorModeValue("gray.400", "#1a202c");
@@ -23,12 +23,6 @@ function TableRow5(props) {
       <Td minWidth={{ sm: "225px" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <Flex direction="column">
-            <Text
-              fontSize="md"
-              color={textColor}
-              fontWeight="bold"
-              minWidth="100%"
-            >
               {row1}
             </Text>
           </Flex>
@@ -53,8 +47,15 @@ function TableRow5(props) {
           </FormControl>
         </Flex>
       </Td>
+        <Td minWidth={{ sm: "225px" }}>
+        <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
+          <FormControl>
+            <Flex direction="column">{row5}</Flex>
+          </FormControl>
+        </Flex>
+      </Td>
     </Tr>
   );
 }
 
-export default TableRow5;
+export default TableRow4;
