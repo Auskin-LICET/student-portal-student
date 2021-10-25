@@ -124,7 +124,7 @@ function InternationalData() {
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
-                  <Td minWidth="12em">
+                  <Td minWidth="14em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -142,7 +142,7 @@ function InternationalData() {
                       </Flex>
                     </Flex>
                   </Td>
-                  <Td minWidth="12em">
+                  <Td minWidth="14em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -158,7 +158,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth="12em">
+                  <Td minWidth="14em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -174,7 +174,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth="12em">
+                  <Td minWidth="14em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -190,7 +190,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth="12em">
+                  <Td minWidth="14em">
                     <Flex
                       align="center"
                       py=".8rem"
@@ -206,7 +206,7 @@ function InternationalData() {
                       />
                     </Flex>
                   </Td>
-                  <Td minWidth="12em">
+                  <Td minWidth="14em">
                     <Flex
                       align="center"
                       py=".8rem"
