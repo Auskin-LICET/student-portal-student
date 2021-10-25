@@ -172,13 +172,7 @@ var dashRoutes = [
         component: Profile,
         layout: "/admin",
       },
-      {
-        path: "/GeneralInformationdata",
-        name: "General",
-        icon: <PersonIcon color="inherit" />,
-        component: GeneralInformationdata,
-        layout: "/auth",
-      },
+
       {
         path: "/signin",
         name: "Sign Out",
