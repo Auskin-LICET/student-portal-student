@@ -46,7 +46,7 @@ function TableRow4(props) {
           </FormControl>
         </Flex>
       </Td>
-      <Td minWidth={{ sm: "20em" }}>
+      <Td minWidth={{ sm: "9em" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
           <FormControl>
             <Flex direction="column">{row4}</Flex>

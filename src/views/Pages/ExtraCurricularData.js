@@ -76,11 +76,17 @@ function ExtraCurricularData() {
         }
       });
   }
-    function substudextraoutreach() {
+  function substudextraoutreach() {
     let params = new URLSearchParams();
     params.append("outreachname", document.getElementById("OUTREACTID").value);
-    params.append("outreachdateyear", document.getElementById("OUTREADAYID").value);
-    params.append("outreachoutcome", document.getElementById("OUTREAOUTCOMID").value);
+    params.append(
+      "outreachdateyear",
+      document.getElementById("OUTREADAYID").value
+    );
+    params.append(
+      "outreachoutcome",
+      document.getElementById("OUTREAOUTCOMID").value
+    );
     params.append("StudentDetails", localStorage.getItem("StudentRoll"));
     params.append("status", "Pending");
     axios
@@ -116,7 +122,7 @@ function ExtraCurricularData() {
       });
   }
 
-    function substudextracultural() {
+  function substudextracultural() {
     let params = new URLSearchParams();
     params.append("eventname", document.getElementById("ENID").value);
     params.append("eventdate", document.getElementById("EDAYID").value);
@@ -140,11 +146,11 @@ function ExtraCurricularData() {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
-  const [show4, setShow4] = useState(false); 
+  const [show4, setShow4] = useState(false);
   const handleToggle1 = () => setShow(!show);
   const handleToggle2 = () => setShow2(!show2);
   const handleToggle3 = () => setShow3(!show3);
-  const handleToggle4 = () => setShow4(!show4); 
+  const handleToggle4 = () => setShow4(!show4);
   const textColor = useColorModeValue("gray.700", "white");
   const [Cdata, setCdata] = useState([]);
   const [Odata, setOdata] = useState([]);
@@ -154,20 +160,23 @@ function ExtraCurricularData() {
   let params = new URLSearchParams();
   params.append("StudentDetails", localStorage.getItem("StudentRoll"));
   useEffect(async () => {
-   axios.all([
-   axios.post("http://localhost:5000/ExtraClubStudentDisplay", params), 
-   axios.post("http://localhost:5000/ExtraOutreachStudentDisplay",params),
-   axios.post("http://localhost:5000/ExtraSportsStudentDisplay",params),
-   axios.post("http://localhost:5000/ExtraCulturalStudentDisplay",params)
- ])
- .then(axios.spread((data1, data2,data3,data4) => {
-    setCdata(data1.data);
-    setOdata(data2.data);
-    setSdata(data3.data);
-    setFdata(data4.data);    
- }));
-},[]);
-  
+    axios
+      .all([
+        axios.post("http://localhost:5000/ExtraClubStudentDisplay", params),
+        axios.post("http://localhost:5000/ExtraOutreachStudentDisplay", params),
+        axios.post("http://localhost:5000/ExtraSportsStudentDisplay", params),
+        axios.post("http://localhost:5000/ExtraCulturalStudentDisplay", params),
+      ])
+      .then(
+        axios.spread((data1, data2, data3, data4) => {
+          setCdata(data1.data);
+          setOdata(data2.data);
+          setSdata(data3.data);
+          setFdata(data4.data);
+        })
+      );
+  }, []);
+
   return (
     <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
       <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
@@ -333,7 +342,7 @@ function ExtraCurricularData() {
             Add
           </Button>
         </SimpleGrid>
-          <Card>
+        <Card>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               Outreach Activity
@@ -448,8 +457,8 @@ function ExtraCurricularData() {
               </Tbody>
             </Table>
           </Collapse>
-          </Card>
-          <SimpleGrid
+        </Card>
+        <SimpleGrid
           marginLeft="auto"
           width="10em"
           me="2.5rem"
@@ -459,7 +468,7 @@ function ExtraCurricularData() {
           <div>
             <SlideFade in={show2}>
               <Button
-                onClick={substudextrasport}
+                onClick={substudextraoutreach}
                 bg="orange.300"
                 width="fit-content"
               >
@@ -477,7 +486,7 @@ function ExtraCurricularData() {
             Add
           </Button>
         </SimpleGrid>
-                  <Card>
+        <Card>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               Sports Achievements
@@ -613,8 +622,8 @@ function ExtraCurricularData() {
               </Tbody>
             </Table>
           </Collapse>
-          </Card>
-          <SimpleGrid
+        </Card>
+        <SimpleGrid
           marginLeft="auto"
           width="10em"
           me="2.5rem"
@@ -642,7 +651,7 @@ function ExtraCurricularData() {
             Add
           </Button>
         </SimpleGrid>
-          <Card>
+        <Card>
           <CardHeader p="6px 0px 22px 0px">
             <Text fontSize="xl" color={textColor} fontWeight="bold">
               Culturals
@@ -757,8 +766,8 @@ function ExtraCurricularData() {
               </Tbody>
             </Table>
           </Collapse>
-          </Card>
-          <SimpleGrid
+        </Card>
+        <SimpleGrid
           marginLeft="auto"
           width="10em"
           me="2.5rem"
