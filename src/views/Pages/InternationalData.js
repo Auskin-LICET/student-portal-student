@@ -20,14 +20,6 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  Stat,
-  StatLabel,
-  Box,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-  Select,
   Button,
   SimpleGrid,
   Collapse,
@@ -41,7 +33,7 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardBody from "components/Card/CardBody.js";
 import InternationalTableRow from "components/Tables/InternationalTableRow";
 import { International } from "variables/general";
-import TableRow6 from "components/Tables/TableRow6";
+import TableRow7 from "components/Tables/TableRow7";
 
 var resul;
 
@@ -55,6 +47,7 @@ function InternationalData() {
     params.append("PersD", document.getElementById("PDID").value);
     params.append("ForLCC", document.getElementById("FLCCID").value);
     params.append("StudentDetails", localStorage.getItem("StudentRoll"));
+    params.append("status", "Pending");
     axios
       .post("http://localhost:5000/insertstudinter", params)
       .then((items) => {
@@ -105,13 +98,14 @@ function InternationalData() {
                   <Th color="gray.400">
                     Foreign Language Courses Completed or Pursuing
                   </Th>
+                  <Th color="gray.400">Verify Status</Th>
                 </Tr>
               </Thead>
 
               <Tbody>
                 {data.map((item) => {
                   return (
-                    <TableRow6
+                    <TableRow7
                       id={item.s_no}
                       row1={item.foreign_campus}
                       row2={item.duration}
@@ -119,6 +113,7 @@ function InternationalData() {
                       row4={item.outcome}
                       row5={item.personal_development}
                       row6={item.foreign_language_courses}
+                      row7={item.verify}
                     />
                   );
                 })}
