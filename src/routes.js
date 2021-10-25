@@ -7,7 +7,7 @@ import InternationalExposure from "views/Dashboard/InternationalExposure";
 import Extracurricular from "views/Dashboard/Extracurricular";
 import FacultyFeedback from "views/Dashboard/FacultyFeedback";
 import Profile from "views/Dashboard/Profile.js";
-import SignIn from "views/Pages/SignIn.js";
+
 import GeneralInformationdata from "views/Pages/GeneralInformationdata";
 import Academicsdata from "views/Pages/Academicdata";
 import ProfessionalDevelopmentdata from "views/Pages/ProfessionalDevelopmentData";
@@ -159,28 +159,12 @@ var dashRoutes = [
     component: Feedbackdata,
     layout: "/admin",
   },
-
   {
-    name: "ACCOUNT PAGES",
-    category: "account",
-    state: "pageCollapse",
-    views: [
-      {
-        path: "/profile",
-        name: "Profile",
-        icon: <PersonIcon color="inherit" />,
-        component: Profile,
-        layout: "/admin",
-      },
-
-      {
-        path: "/signin",
-        name: "Sign Out",
-        icon: <DocumentIcon color="inherit" />,
-        component: SignIn,
-        layout: "/auth",
-      },
-    ],
+    path: "/profile",
+    name: "Profile",
+    icon: <PersonIcon color="inherit" />,
+    component: Profile,
+    layout: "/admin",
   },
 ];
 export default dashRoutes;

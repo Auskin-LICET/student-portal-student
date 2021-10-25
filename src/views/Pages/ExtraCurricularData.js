@@ -216,7 +216,7 @@ function ExtraCurricularData() {
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "21.5%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -232,7 +232,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "21.5%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -248,7 +248,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "21.5%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -264,7 +264,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "21.5%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -376,7 +376,7 @@ function ExtraCurricularData() {
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "28.8%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -392,7 +392,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "28.8%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -408,7 +408,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "28.8%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -525,7 +525,7 @@ function ExtraCurricularData() {
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "19.2%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -541,7 +541,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "27.3%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -557,7 +557,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "20%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -573,7 +573,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "20%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -685,7 +685,7 @@ function ExtraCurricularData() {
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "28.8%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -701,7 +701,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "28.8%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
@@ -717,7 +717,7 @@ function ExtraCurricularData() {
                       />
                     </Flex>
                   </Td>
-                  <Td width={{ sm: "16em" }}>
+                  <Td width={{ sm: "28.8%" }}>
                     <Flex
                       align="center"
                       py=".8rem"
