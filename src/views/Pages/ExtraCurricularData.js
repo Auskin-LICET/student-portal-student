@@ -126,7 +126,7 @@ function ExtraCurricularData() {
               </Tbody>
             </Table>
           </CardBody>
-          <Collapse in={show} animateOpacity>
+          <Collapse in={show}>
             <Table variant="simple" color={textColor}>
               <Tbody>
                 <Tr>
