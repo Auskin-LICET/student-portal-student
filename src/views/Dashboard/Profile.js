@@ -14,6 +14,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
@@ -63,13 +64,10 @@ function Profile() {
         align="center"
       >
         <Box
-          bgImage={ProfileBgImage}
           bgSize="cover"
           w="100%"
-          h="300px"
+          h="170px"
           borderRadius="25px"
-          bgPosition="50%"
-          bgRepeat="no-repeat"
           position="relative"
           display="flex"
           justifyContent="center"
@@ -77,7 +75,6 @@ function Profile() {
           <Flex
             direction={{ sm: "column", md: "row" }}
             mx="1.5rem"
-            maxH="330px"
             w={{ sm: "90%", xl: "95%" }}
             justifyContent={{ sm: "center", md: "space-between" }}
             align="center"
@@ -90,9 +87,9 @@ function Profile() {
             p="24px"
             borderRadius="20px"
             transform={{
-              sm: "translateY(45%)",
-              md: "translateY(110%)",
-              lg: "translateY(160%)",
+              sm: "translateY(100%)",
+              md: "translateY(50%)",
+              lg: "translateY(60%)",
             }}
           >
             <Flex
@@ -102,13 +99,6 @@ function Profile() {
               w={{ sm: "100%" }}
               textAlign={{ sm: "center", md: "start" }}
             >
-              <Avatar
-                me={{ md: "22px" }}
-                src={avatar8}
-                w="80px"
-                h="80px"
-                borderRadius="15px"
-              />
               <Flex direction="column" maxWidth="100%" my={{ sm: "14px" }}>
                 <Text
                   fontSize={{ sm: "lg", lg: "xl" }}
@@ -127,6 +117,9 @@ function Profile() {
                 </Text>
               </Flex>
             </Flex>
+            <Button colorScheme="orange" variant="solid">
+              Settings
+            </Button>
             <Flex
               direction={{ sm: "column", lg: "row" }}
               w={{ sm: "100%", md: "50%", lg: "auto" }}
