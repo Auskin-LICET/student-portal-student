@@ -1331,36 +1331,6 @@ function GeneralInformationdata() {
             </Flex>
           </Td>
         </Tr>
-        <Tr>
-        <Td minWidth={{ sm: "17rem" }}>
-          <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-            <Flex direction="column">
-              <Text
-                fontSize="md"
-                color={textColor}
-                fontWeight="bold"
-                minWidth="100%"
-              >Group
-              </Text>
-            </Flex>
-          </Flex>
-        </Td>
-        <Td minWidth={{ sm: "17rem" }}>
-          <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
-            <Flex direction="column">
-              <FormControl>
-                <Input
-                  id="GROUP2"
-                  borderRadius="5px"
-                  fontSize="sm"
-                  type="text"
-                  placeholder="Enter your group"
-                />
-              </FormControl>
-            </Flex>
-          </Flex>
-        </Td>
-      </Tr>
       <Tr>
       <Td minWidth={{ sm: "17rem" }}>
         <Flex align="center" py=".8rem" minWidth="100%" flexWrap="nowrap">
