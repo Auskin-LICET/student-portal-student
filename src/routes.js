@@ -161,7 +161,18 @@ var dashRoutes = [
   },
   {
     path: "/profile",
-    name: "Profile",
+    name: (
+      <p
+        style={{
+          textAlign: "left",
+          lineHeight: "1.2rem",
+          whiteSpace: "normal",
+          wordWrap: "break-word",
+        }}
+      >
+        Profile
+      </p>
+    ),
     icon: <PersonIcon color="inherit" />,
     component: Profile,
     layout: "/admin",

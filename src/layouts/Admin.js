@@ -111,7 +111,7 @@ export default function Dashboard(props) {
         <Portal>
           <AdminNavbar
             onOpen={onOpen}
-            logoText={"Hod Dashboard"}
+            logoText={"Student Portal"}
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             rtlActive={false}

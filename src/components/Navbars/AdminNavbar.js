@@ -115,36 +115,24 @@ export default function AdminNavbar(props) {
         <Box mb={{ sm: "8px", md: "0px" }}>
           <Breadcrumb>
             <BreadcrumbItem color={mainText}>
-              <BreadcrumbLink href="#" color={secondaryText}>
-                Pages
+              <BreadcrumbLink href="#/admin/dashboard" color={secondaryText}>
+                Student
               </BreadcrumbLink>
             </BreadcrumbItem>
 
             <BreadcrumbItem color={mainText}>
-              <BreadcrumbLink href="#" color={mainText}>
-                {brandText}
-              </BreadcrumbLink>
+              <Breadcrumb color={mainText}>{brandText}</Breadcrumb>
             </BreadcrumbItem>
           </Breadcrumb>
           {/* Here we create navbar brand, based on route name */}
-          <Link
+          <Box
             color={mainText}
-            href="#"
             bg="inherit"
             borderRadius="inherit"
             fontWeight="bold"
-            _hover={{ color: { mainText } }}
-            _active={{
-              bg: "inherit",
-              transform: "none",
-              borderColor: "transparent",
-            }}
-            _focus={{
-              boxShadow: "none",
-            }}
           >
             {brandText}
-          </Link>
+          </Box>
         </Box>
         <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
           <AdminNavbarLinks
