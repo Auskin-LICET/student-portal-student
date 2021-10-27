@@ -40,8 +40,7 @@ import { ProfessionalMembership } from "variables/general";
 
 function GeneralInformationdata() {
   function logout() {
-    window.location.href =
-      "http://localhost:3000/purity-ui-dashboard#/auth/SignIn";
+    window.location.href = "http://localhost:3000/student-portal#/auth/SignIn";
   }
 
   function funinsert() {
@@ -143,7 +142,7 @@ function GeneralInformationdata() {
     axios.post("http://localhost:5000/insertroll", params);
     axios.post("http://localhost:5000/studentinsert", params);
     window.location.href =
-      "http://localhost:3000/purity-ui-dashboard#/admin/dashboard";
+      "http://localhost:3000/student-portal#/admin/dashboard";
   }
   const textColor = useColorModeValue("gray.700", "white");
 
