@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import change_pass from "../../controller/changepassword";
 // Chakra imports
 import {
@@ -29,8 +29,9 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from "@chakra-ui/react";
 
+} from "@chakra-ui/react";
+import axios from 'axios';
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
@@ -55,7 +56,11 @@ import {
 } from "react-icons/fa";
 import { IoDocumentsSharp } from "react-icons/io5";
 
+
+
 function Profile() {
+var sname,licet_email,roll_no,dept,reg_no,batch,cell;
+
   // Chakra color mode
   const textColor = useColorModeValue("gray.700", "white");
   const bgProfile = useColorModeValue(
@@ -68,7 +73,24 @@ function Profile() {
   );
   const emailColor = useColorModeValue("gray.400", "gray.300");
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [data, setData] = useState([]);
 
+  let params = new URLSearchParams;
+  params.append("StudentDetails",localStorage.getItem("StudentRoll"));
+  console.log(localStorage);
+
+  axios.post("http://localhost:5000/GeneralStudent",params).then((items) => {
+    setData(items.data);});
+  data.map((item)=>{
+     sname=item.sname,
+     licet_email=item.licet_email,
+     roll_no=item.roll_no,
+     dept=item.dept,
+     reg_no=item.reg_no,
+     batch=item.batch,
+     cell=item.contant_no
+
+  })  
   return (
     <Flex direction="column">
       <Box
@@ -123,14 +145,14 @@ function Profile() {
                   fontWeight="bold"
                   ms={{ sm: "8px", md: "0px" }}
                 >
-                  Auskin Immanuel J
+                  {sname}
                 </Text>
                 <Text
                   fontSize={{ sm: "sm", md: "md" }}
                   color={emailColor}
                   fontWeight="semibold"
                 >
-                  auskinimmanuel.24cs@licet.ac.in
+                  {licet_email}
                 </Text>
               </Flex>
             </Flex>
@@ -163,14 +185,14 @@ function Profile() {
         <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
-              Roll Number:
+              Roll No.:
             </Text>
           </CardHeader>
 
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                24CS0856
+              {roll_no}
               </Text>
             </Flex>
           </CardBody>
@@ -185,7 +207,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                311120104012
+                {reg_no}
               </Text>
             </Flex>
           </CardBody>
@@ -200,7 +222,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                CSE
+                {dept}
               </Text>
             </Flex>
           </CardBody>
@@ -230,7 +252,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                2020 - 2024
+                {batch}
               </Text>
             </Flex>
           </CardBody>
@@ -245,7 +267,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                +91 90035 45634
+                {cell}
               </Text>
             </Flex>
           </CardBody>
