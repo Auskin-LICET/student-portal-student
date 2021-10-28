@@ -17,6 +17,9 @@ export default function change_pass() {
     let params = new URLSearchParams();
     params.append("new-pass", newPass);
     params.append("old-pass", oldPass);
+    params.append("email", localStorage.email);
+    params.append("auth_token", localStorage.auth_token);
+
     axios.post("http://localhost:5000/passchange", params).then((result) => {
       if (result.data === "pass-fail") {
         document.getElementById("pass-fail").style.display = "block";
