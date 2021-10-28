@@ -21,6 +21,16 @@ import {
   SimpleGrid,
   Grid,
   GridItem,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuIcon,
+  MenuCommand,
+  MenuDivider,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -37,6 +47,7 @@ import { TechnicalSkills } from "variables/general";
 import { NonTechnicalSkills } from "variables/general";
 import { Goals } from "variables/general";
 import { ProfessionalMembership } from "variables/general";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 function GeneralInformationdata() {
   function logout() {
@@ -50,6 +61,8 @@ function GeneralInformationdata() {
     params.append("registerno", document.getElementById("REID").value);
     params.append("sex", document.getElementById("SID").value);
     params.append("dateofbirth", document.getElementById("DOBID").value);
+    params.append("department", document.getElementById("DEPT").value);
+    params.append("batch", document.getElementById("BATCH").value);
     params.append("nationality", document.getElementById("NATIONID").value);
     params.append("religion", document.getElementById("RELIGIONID").value);
     params.append("parish", document.getElementById("PARISHID").value);
@@ -63,6 +76,8 @@ function GeneralInformationdata() {
     params.append("peremail", document.getElementById("PEREMID").value);
     params.append("preaddr", document.getElementById("PREADDRID").value);
     params.append("peraddr", document.getElementById("PERADDRID").value);
+    params.append("langknown", document.getElementById("LANKNO").value);
+    params.append("pan", document.getElementById("PAN").value);
 
     params.append("hsenos", document.getElementById("NOS1").value);
     params.append("hsebod", document.getElementById("BOARD1").value);
@@ -91,6 +106,7 @@ function GeneralInformationdata() {
     params.append("faemail", document.getElementById("FEI").value);
     params.append("gunam", document.getElementById("GN").value);
     params.append("guqul", document.getElementById("GQ").value);
+    params.append("guocc", document.getElementById("GO").value);
     params.append("guoffadd", document.getElementById("GOA").value);
     params.append("guanu", document.getElementById("GAI").value);
     params.append("gumob", document.getElementById("GMN").value);
@@ -184,7 +200,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          STUDENT NAME:
+                          Student Name
                         </Text>
                       </Flex>
                     </Flex>
@@ -225,7 +241,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          ROLL NO:
+                          Roll No
                         </Text>
                       </Flex>
                     </Flex>
@@ -266,7 +282,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          REGISTER NO:
+                          Register No
                         </Text>
                       </Flex>
                     </Flex>
@@ -307,7 +323,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          SEX:
+                          Gender
                         </Text>
                       </Flex>
                     </Flex>
@@ -321,13 +337,18 @@ function GeneralInformationdata() {
                     >
                       <Flex direction="column">
                         <FormControl>
-                          <Input
-                            id="SID"
-                            borderRadius="5px"
-                            fontSize="sm"
-                            type="text"
-                            placeholder="Enter your gender"
-                          />
+
+                        <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >Male</MenuItem>
+                            <MenuItem>Female</MenuItem>
+                            <MenuItem>Other</MenuItem>
+                          </MenuList>
+                        </Menu>
+
                         </FormControl>
                       </Flex>
                     </Flex>
@@ -348,7 +369,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          DATE OF BIRTH:
+                          Date Of Birth
                         </Text>
                       </Flex>
                     </Flex>
@@ -362,12 +383,15 @@ function GeneralInformationdata() {
                     >
                       <Flex direction="column">
                         <FormControl>
-                          <Input
+                        <Input
                             id="DOBID"
                             borderRadius="5px"
                             fontSize="sm"
                             type="text"
-                            placeholder="Enter your date of birth"
+                            style={{
+                              backgroundColor: "rgb(31 39 51)",
+                            }}
+                            type="date"
                           />
                         </FormControl>
                       </Flex>
@@ -389,7 +413,89 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          NATIONALITY:
+                          Department
+                        </Text>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <FormControl>
+                          <Input
+                            id="DEPT"
+                            borderRadius="5px"
+                            fontSize="sm"
+                            type="text"
+                            placeholder="Enter your Department"
+                          />
+                        </FormControl>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <Text
+                          fontSize="md"
+                          color={textColor}
+                          fontWeight="bold"
+                          minWidth="100%"
+                        >
+                          Batch
+                        </Text>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <FormControl>
+                          <Input
+                            id="BATCH"
+                            borderRadius="5px"
+                            fontSize="sm"
+                            type="text"
+                            placeholder="Enter your Batch"
+                          />
+                        </FormControl>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <Text
+                          fontSize="md"
+                          color={textColor}
+                          fontWeight="bold"
+                          minWidth="100%"
+                        >
+                          Nationality
                         </Text>
                       </Flex>
                     </Flex>
@@ -430,7 +536,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          RELIGION:
+                          Religion
                         </Text>
                       </Flex>
                     </Flex>
@@ -471,7 +577,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          IF CATHOLIC, PARISH ?:
+                          If Catholic, Parish ? 
                         </Text>
                       </Flex>
                     </Flex>
@@ -512,7 +618,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          DALIT CATHOLIC:
+                          Dalit Catholic
                         </Text>
                       </Flex>
                     </Flex>
@@ -526,13 +632,15 @@ function GeneralInformationdata() {
                     >
                       <Flex direction="column">
                         <FormControl>
-                          <Input
-                            id="DALITID"
-                            borderRadius="5px"
-                            fontSize="sm"
-                            type="text"
-                            placeholder="Enter yes/no"
-                          />
+                        <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >Y</MenuItem>
+                            <MenuItem>N</MenuItem>
+                          </MenuList>
+                        </Menu>
                         </FormControl>
                       </Flex>
                     </Flex>
@@ -553,7 +661,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          COMMUNITY:
+                          Community
                         </Text>
                       </Flex>
                     </Flex>
@@ -594,7 +702,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          BLOOD GROUP:
+                          Blood Group
                         </Text>
                       </Flex>
                     </Flex>
@@ -635,7 +743,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          MOTHER TOUNGE:
+                          Mother Tongue
                         </Text>
                       </Flex>
                     </Flex>
@@ -676,7 +784,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          CONTACT NUMBER:
+                          Contact Number
                         </Text>
                       </Flex>
                     </Flex>
@@ -717,7 +825,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          AADHAR NO:
+                          Aadhar No.
                         </Text>
                       </Flex>
                     </Flex>
@@ -758,7 +866,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          OFFICIAL EMAIL ID:
+                          Official Email ID
                         </Text>
                       </Flex>
                     </Flex>
@@ -799,7 +907,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          PERSONAL EMAIL ID:
+                          Personal Email ID
                         </Text>
                       </Flex>
                     </Flex>
@@ -840,7 +948,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          PRESENT ADDRESS:
+                          Present Address
                         </Text>
                       </Flex>
                     </Flex>
@@ -881,7 +989,7 @@ function GeneralInformationdata() {
                           fontWeight="bold"
                           minWidth="100%"
                         >
-                          PERMANENT ADDRESS:
+                          Permanent Address
                         </Text>
                       </Flex>
                     </Flex>
@@ -901,6 +1009,88 @@ function GeneralInformationdata() {
                             fontSize="sm"
                             type="text"
                             placeholder="Enter your Permanent address"
+                          />
+                        </FormControl>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <Text
+                          fontSize="md"
+                          color={textColor}
+                          fontWeight="bold"
+                          minWidth="100%"
+                        >
+                          Languages Known
+                        </Text>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <FormControl>
+                          <Input
+                            id="LANKNO"
+                            borderRadius="5px"
+                            fontSize="sm"
+                            type="text"
+                            placeholder="Enter your Permanent address"
+                          />
+                        </FormControl>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                </Tr>
+                <Tr>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <Text
+                          fontSize="md"
+                          color={textColor}
+                          fontWeight="bold"
+                          minWidth="100%"
+                        >
+                          PAN
+                        </Text>
+                      </Flex>
+                    </Flex>
+                  </Td>
+                  <Td minWidth={{ sm: "17rem" }}>
+                    <Flex
+                      align="center"
+                      py=".8rem"
+                      minWidth="100%"
+                      flexWrap="nowrap"
+                    >
+                      <Flex direction="column">
+                        <FormControl>
+                          <Input
+                            id="PAN"
+                            borderRadius="5px"
+                            fontSize="sm"
+                            type="text"
+                            placeholder="Enter your PAN Number"
                           />
                         </FormControl>
                       </Flex>
@@ -1908,7 +2098,7 @@ function GeneralInformationdata() {
                             fontWeight="bold"
                             minWidth="100%"
                           >
-                            Guardian Name
+                            Guardian's Name
                           </Text>
                         </Flex>
                       </Flex>
@@ -1949,7 +2139,7 @@ function GeneralInformationdata() {
                             fontWeight="bold"
                             minWidth="100%"
                           >
-                            Guardian Qualification
+                            Guardian's Qualification
                           </Text>
                         </Flex>
                       </Flex>
@@ -1964,7 +2154,7 @@ function GeneralInformationdata() {
                         <Flex direction="column">
                           <FormControl>
                             <Input
-                              id="GQ"
+                              id="GO"
                               borderRadius="5px"
                               fontSize="sm"
                               type="text"
@@ -1990,7 +2180,48 @@ function GeneralInformationdata() {
                             fontWeight="bold"
                             minWidth="100%"
                           >
-                            Guardian Office Address
+                            Guardian's Occupation
+                          </Text>
+                        </Flex>
+                      </Flex>
+                    </Td>
+                    <Td minWidth={{ sm: "17rem" }}>
+                      <Flex
+                        align="center"
+                        py=".8rem"
+                        minWidth="100%"
+                        flexWrap="nowrap"
+                      >
+                        <Flex direction="column">
+                          <FormControl>
+                            <Input
+                              id="FO"
+                              borderRadius="5px"
+                              fontSize="sm"
+                              type="text"
+                              placeholder="Enter Fathers Occupation"
+                            />
+                          </FormControl>
+                        </Flex>
+                      </Flex>
+                    </Td>
+                  </Tr>
+                  <Tr>
+                    <Td minWidth={{ sm: "17rem" }}>
+                      <Flex
+                        align="center"
+                        py=".8rem"
+                        minWidth="100%"
+                        flexWrap="nowrap"
+                      >
+                        <Flex direction="column">
+                          <Text
+                            fontSize="md"
+                            color={textColor}
+                            fontWeight="bold"
+                            minWidth="100%"
+                          >
+                            Guardian's Office Address
                           </Text>
                         </Flex>
                       </Flex>
@@ -2031,7 +2262,7 @@ function GeneralInformationdata() {
                             fontWeight="bold"
                             minWidth="100%"
                           >
-                            Guardian Annual Income
+                            Guardian's Annual Income
                           </Text>
                         </Flex>
                       </Flex>
@@ -2072,7 +2303,7 @@ function GeneralInformationdata() {
                             fontWeight="bold"
                             minWidth="100%"
                           >
-                            Guardian Mobile No.
+                            Guardian's Mobile No.
                           </Text>
                         </Flex>
                       </Flex>
@@ -2113,7 +2344,7 @@ function GeneralInformationdata() {
                             fontWeight="bold"
                             minWidth="100%"
                           >
-                            Guardian Email ID
+                            Guardian's Email ID
                           </Text>
                         </Flex>
                       </Flex>
@@ -2632,13 +2863,15 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="AOL"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter Y or N"
-                            />
+                          <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >Y</MenuItem>
+                            <MenuItem>N</MenuItem>
+                          </MenuList>
+                        </Menu>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -2728,13 +2961,16 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="DOA"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter the Date Of Admission"
-                            />
+                          <Input
+                            id="DOA"
+                            borderRadius="5px"
+                            fontSize="sm"
+                            type="text"
+                            style={{
+                              backgroundColor: "rgb(31 39 51)",
+                            }}
+                            type="date"
+                          />
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -2769,13 +3005,15 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="QUO"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter GQ or MQ"
-                            />
+                          <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >GQ</MenuItem>
+                            <MenuItem>MQ</MenuItem>
+                          </MenuList>
+                        </Menu>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -2810,13 +3048,15 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="RL"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter R or L"
-                            />
+                          <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >R</MenuItem>
+                            <MenuItem>L</MenuItem>
+                          </MenuList>
+                        </Menu>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -2851,13 +3091,15 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="DH"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter D or H"
-                            />
+                          <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >D</MenuItem>
+                            <MenuItem>H</MenuItem>
+                          </MenuList>
+                        </Menu>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -2988,13 +3230,15 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="FG"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter Y or N"
-                            />
+                          <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >Y</MenuItem>
+                            <MenuItem>N</MenuItem>
+                          </MenuList>
+                        </Menu>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -3030,13 +3274,15 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                            <Input
-                              id="EB"
-                              borderRadius="5px"
-                              fontSize="sm"
-                              type="text"
-                              placeholder="Enter Y or N"
-                            />
+                          <Menu>
+                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                            Select
+                          </MenuButton>
+                          <MenuList>
+                            <MenuItem >Y</MenuItem>
+                            <MenuItem>N</MenuItem>
+                          </MenuList>
+                        </Menu>
                           </FormControl>
                         </Flex>
                       </Flex>
