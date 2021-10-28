@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import change_pass from "../../controller/changepassword";
 // Chakra imports
 import {
   Avatar,
@@ -11,6 +12,13 @@ import {
   Image,
   Link,
   Switch,
+  Table,
+  Tbody,
+  Th,
+  Thead,
+  Tr,
+  Td,
+  Input,
   Text,
   useColorModeValue,
   useDisclosure,
@@ -21,8 +29,9 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
-} from "@chakra-ui/react";
 
+} from "@chakra-ui/react";
+import axios from 'axios';
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
@@ -47,7 +56,11 @@ import {
 } from "react-icons/fa";
 import { IoDocumentsSharp } from "react-icons/io5";
 
+
+
 function Profile() {
+var sname,licet_email,roll_no,dept,reg_no,batch,cell;
+
   // Chakra color mode
   const textColor = useColorModeValue("gray.700", "white");
   const bgProfile = useColorModeValue(
@@ -59,8 +72,25 @@ function Profile() {
     "rgba(255, 255, 255, 0.31)"
   );
   const emailColor = useColorModeValue("gray.400", "gray.300");
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [data, setData] = useState([]);
 
+  let params = new URLSearchParams;
+  params.append("StudentDetails",localStorage.getItem("StudentRoll"));
+  console.log(localStorage);
+
+  axios.post("http://localhost:5000/GeneralStudent",params).then((items) => {
+    setData(items.data);});
+  data.map((item)=>{
+     sname=item.sname,
+     licet_email=item.licet_email,
+     roll_no=item.roll_no,
+     dept=item.dept,
+     reg_no=item.reg_no,
+     batch=item.batch,
+     cell=item.contant_no
+
+  })  
   return (
     <Flex direction="column">
       <Box
@@ -115,14 +145,14 @@ function Profile() {
                   fontWeight="bold"
                   ms={{ sm: "8px", md: "0px" }}
                 >
-                  Auskin Immanuel J
+                  {sname}
                 </Text>
                 <Text
                   fontSize={{ sm: "sm", md: "md" }}
                   color={emailColor}
                   fontWeight="semibold"
                 >
-                  auskinimmanuel.24cs@licet.ac.in
+                  {licet_email}
                 </Text>
               </Flex>
             </Flex>
@@ -130,22 +160,20 @@ function Profile() {
               Settings
             </Button>
             <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            
-          </ModalBody>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Modal Title</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody></ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+                <ModalFooter>
+                  <Button colorScheme="blue" mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                  <Button variant="ghost">Secondary Action</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
             <Flex
               direction={{ sm: "column", lg: "row" }}
               w={{ sm: "100%", md: "50%", lg: "auto" }}
@@ -157,14 +185,14 @@ function Profile() {
         <Card p="16px" my={{ sm: "24px", xl: "0px" }}>
           <CardHeader p="12px 5px" mb="12px">
             <Text fontSize="lg" color={textColor} fontWeight="bold">
-              Roll Number:
+              Roll No.:
             </Text>
           </CardHeader>
 
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                24CS0856
+              {roll_no}
               </Text>
             </Flex>
           </CardBody>
@@ -179,7 +207,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                311120104012
+                {reg_no}
               </Text>
             </Flex>
           </CardBody>
@@ -194,7 +222,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                CSE
+                {dept}
               </Text>
             </Flex>
           </CardBody>
@@ -224,7 +252,7 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                2020 - 2024
+                {batch}
               </Text>
             </Flex>
           </CardBody>
@@ -239,12 +267,94 @@ function Profile() {
           <CardBody px="5px">
             <Flex align="center" mb="18px">
               <Text fontSize="md" color="gray.500" fontWeight="400">
-                +91 90035 45634
+                {cell}
               </Text>
             </Flex>
           </CardBody>
         </Card>
       </SimpleGrid>
+      <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
+        <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
+          <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
+            <CardHeader p="6px 0px 22px 0px">
+              <Text fontSize="xl" color={textColor} fontWeight="bold">
+                Industrial Visit
+              </Text>
+            </CardHeader>
+
+            <CardBody>
+              <Flex
+                flexDirection="column"
+                align="center"
+                justify="center"
+                w="100%"
+              >
+                <SimpleGrid
+                  columns={{ sm: 1, md: 3, xl: 3 }}
+                  spacing="24px"
+                  w="100%"
+                  mt="1rem"
+                >
+                  <Input
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Enter Old Password"
+                    id="old-pass"
+                  />
+                  <Input
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Enter New Password"
+                    id="new-pass"
+                  />
+                  <Input
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Re-Enter New Password"
+                    id="re-pass"
+                  />
+                </SimpleGrid>
+                <Flex
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  maxW="100%"
+                  mt="0px"
+                >
+                  <Text color="red" id="pass-mis" display="none">
+                    Passwords Don't Match
+                  </Text>
+                  <Text color="red" id="pass-fail" display="none">
+                    Incorrect Old Password or Username or Invalid User
+                  </Text>
+                  <Text color="red" id="server-fail" display="none">
+                    Server Error. Try again after some time
+                  </Text>
+                  <Text color="green" id="pass-success" display="none">
+                    Password Changed Successfully
+                  </Text>
+                </Flex>
+                <Flex direction="column" align="flex-end" w="100%">
+                  <Button
+                    marginTop="3rem"
+                    marginBottom="1rem"
+                    marginRight="1rem"
+                    colorScheme="orange"
+                    variant="solid"
+                    id="pass-button"
+                    onClick={change_pass}
+                  >
+                    Change Password
+                  </Button>
+                </Flex>
+              </Flex>
+            </CardBody>
+          </Card>
+        </SimpleGrid>
+      </Flex>
     </Flex>
   );
 }
