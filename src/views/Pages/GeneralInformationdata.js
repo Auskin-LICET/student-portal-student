@@ -32,6 +32,7 @@ import {
   MenuCommand,
   MenuDivider,
 } from "@chakra-ui/react";
+
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
@@ -338,16 +339,17 @@ function GeneralInformationdata() {
                       <Flex direction="column">
                         <FormControl>
 
-                        <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+                        <Select  placeholder="Select Option" isRequired>
+                          {/* <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                             Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >Male</MenuItem>
-                            <MenuItem>Female</MenuItem>
-                            <MenuItem>Other</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          </MenuButton> */}
+                          {/* <MenuList> */}
+                          
+                            <option value="option1">Male</option>
+                            <option value="option2">Female</option>
+                            <option value="option3">Other</option>
+                          {/* </MenuList> */}
+                        </Select>
 
                         </FormControl>
                       </Flex>

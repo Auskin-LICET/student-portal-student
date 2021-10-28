@@ -29,6 +29,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  Collapse,
 
 } from "@chakra-ui/react";
 import axios from 'axios';
@@ -162,15 +163,25 @@ var sname,licet_email,roll_no,dept,reg_no,batch,cell;
             <Modal isOpen={isOpen} onClose={onClose}>
               <ModalOverlay />
               <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
+                <ModalHeader>Settings</ModalHeader>
                 <ModalCloseButton />
-                <ModalBody></ModalBody>
+                <ModalBody>
+                <Button
+                    marginTop="3rem"
+                    marginBottom="1rem"
+                    marginRight="1rem"
+                    colorScheme="orange"
+                    variant="solid"
+                    id="pass-button"
+                    onClick={onOpen}
+                  >Reset Password</Button>
+                </ModalBody>
 
                 <ModalFooter>
                   <Button colorScheme="blue" mr={3} onClick={onClose}>
                     Close
                   </Button>
-                  <Button variant="ghost">Secondary Action</Button>
+                 
                 </ModalFooter>
               </ModalContent>
             </Modal>
@@ -273,12 +284,13 @@ var sname,licet_email,roll_no,dept,reg_no,batch,cell;
           </CardBody>
         </Card>
       </SimpleGrid>
+      <Collapse in={onOpen}>
       <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
         <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
           <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
             <CardHeader p="6px 0px 22px 0px">
               <Text fontSize="xl" color={textColor} fontWeight="bold">
-                Industrial Visit
+                Change password
               </Text>
             </CardHeader>
 
@@ -355,6 +367,7 @@ var sname,licet_email,roll_no,dept,reg_no,batch,cell;
           </Card>
         </SimpleGrid>
       </Flex>
+      </Collapse>
     </Flex>
   );
 }
