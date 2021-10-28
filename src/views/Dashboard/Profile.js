@@ -1,4 +1,5 @@
 import React from "react";
+import change_pass from "../../controller/changepassword";
 // Chakra imports
 import {
   Avatar,
@@ -11,6 +12,13 @@ import {
   Image,
   Link,
   Switch,
+  Table,
+  Tbody,
+  Th,
+  Thead,
+  Tr,
+  Td,
+  Input,
   Text,
   useColorModeValue,
   useDisclosure,
@@ -59,7 +67,7 @@ function Profile() {
     "rgba(255, 255, 255, 0.31)"
   );
   const emailColor = useColorModeValue("gray.400", "gray.300");
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Flex direction="column">
@@ -130,22 +138,20 @@ function Profile() {
               Settings
             </Button>
             <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            
-          </ModalBody>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Modal Title</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody></ModalBody>
 
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+                <ModalFooter>
+                  <Button colorScheme="blue" mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                  <Button variant="ghost">Secondary Action</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
             <Flex
               direction={{ sm: "column", lg: "row" }}
               w={{ sm: "100%", md: "50%", lg: "auto" }}
@@ -245,6 +251,88 @@ function Profile() {
           </CardBody>
         </Card>
       </SimpleGrid>
+      <Flex direction="column" pt={{ base: "500px", md: "75px" }}>
+        <SimpleGrid columns={{ sm: 1, md: 1, xl: 1 }} gap={5}>
+          <Card overflowX={{ sm: "scroll", xl: "hidden" }}>
+            <CardHeader p="6px 0px 22px 0px">
+              <Text fontSize="xl" color={textColor} fontWeight="bold">
+                Industrial Visit
+              </Text>
+            </CardHeader>
+
+            <CardBody>
+              <Flex
+                flexDirection="column"
+                align="center"
+                justify="center"
+                w="100%"
+              >
+                <SimpleGrid
+                  columns={{ sm: 1, md: 3, xl: 3 }}
+                  spacing="24px"
+                  w="100%"
+                  mt="1rem"
+                >
+                  <Input
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Enter Old Password"
+                    id="old-pass"
+                  />
+                  <Input
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Enter New Password"
+                    id="new-pass"
+                  />
+                  <Input
+                    borderRadius="5px"
+                    fontSize="sm"
+                    type="text"
+                    placeholder="Re-Enter New Password"
+                    id="re-pass"
+                  />
+                </SimpleGrid>
+                <Flex
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignItems="center"
+                  maxW="100%"
+                  mt="0px"
+                >
+                  <Text color="red" id="pass-mis" display="none">
+                    Passwords Don't Match
+                  </Text>
+                  <Text color="red" id="pass-fail" display="none">
+                    Incorrect Old Password
+                  </Text>
+                  <Text color="red" id="server-fail" display="none">
+                    Server Error. Try again after some time
+                  </Text>
+                  <Text color="green" id="pass-success" display="none">
+                    Password Changed Successfully
+                  </Text>
+                </Flex>
+                <Flex direction="column" align="flex-end" w="100%">
+                  <Button
+                    marginTop="3rem"
+                    marginBottom="1rem"
+                    marginRight="1rem"
+                    colorScheme="orange"
+                    variant="solid"
+                    id="pass-button"
+                    onClick={change_pass}
+                  >
+                    Change Password
+                  </Button>
+                </Flex>
+              </Flex>
+            </CardBody>
+          </Card>
+        </SimpleGrid>
+      </Flex>
     </Flex>
   );
 }
