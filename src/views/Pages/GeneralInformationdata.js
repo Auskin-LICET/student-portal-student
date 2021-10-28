@@ -339,16 +339,10 @@ function GeneralInformationdata() {
                       <Flex direction="column">
                         <FormControl>
 
-                        <Select  placeholder="Select Option" isRequired>
-                          {/* <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton> */}
-                          {/* <MenuList> */}
-                          
+                        <Select  placeholder="Select Option" isRequired>      
                             <option value="option1">Male</option>
                             <option value="option2">Female</option>
                             <option value="option3">Other</option>
-                          {/* </MenuList> */}
                         </Select>
 
                         </FormControl>
@@ -634,15 +628,10 @@ function GeneralInformationdata() {
                     >
                       <Flex direction="column">
                         <FormControl>
-                        <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >Y</MenuItem>
-                            <MenuItem>N</MenuItem>
-                          </MenuList>
-                        </Menu>
+                        <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">Y</option>
+                            <option value="option2">N</option>
+                        </Select>
                         </FormControl>
                       </Flex>
                     </Flex>
@@ -2865,15 +2854,10 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                          <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >Y</MenuItem>
-                            <MenuItem>N</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">Y</option>
+                            <option value="option2">N</option>
+                        </Select>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -3007,15 +2991,10 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                          <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >GQ</MenuItem>
-                            <MenuItem>MQ</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">GQ</option>
+                            <option value="option2">MQ</option>
+                        </Select>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -3050,15 +3029,10 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                          <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >R</MenuItem>
-                            <MenuItem>L</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">R</option>
+                            <option value="option2">L</option>
+                        </Select>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -3093,15 +3067,10 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                          <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >D</MenuItem>
-                            <MenuItem>H</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">D</option>
+                            <option value="option2">H</option>
+                        </Select>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -3232,15 +3201,10 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                          <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >Y</MenuItem>
-                            <MenuItem>N</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">Y</option>
+                            <option value="option2">N</option>
+                        </Select>
                           </FormControl>
                         </Flex>
                       </Flex>
@@ -3276,15 +3240,10 @@ function GeneralInformationdata() {
                       >
                         <Flex direction="column">
                           <FormControl>
-                          <Menu>
-                          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                            Select
-                          </MenuButton>
-                          <MenuList>
-                            <MenuItem >Y</MenuItem>
-                            <MenuItem>N</MenuItem>
-                          </MenuList>
-                        </Menu>
+                          <Select  placeholder="Select Option" isRequired>      
+                            <option value="option1">Y</option>
+                            <option value="option2">N</option>
+                        </Select>
                           </FormControl>
                         </Flex>
                       </Flex>
