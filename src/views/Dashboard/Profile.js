@@ -306,7 +306,7 @@ function Profile() {
                     Passwords Don't Match
                   </Text>
                   <Text color="red" id="pass-fail" display="none">
-                    Incorrect Old Password
+                    Incorrect Old Password or Username or Invalid User
                   </Text>
                   <Text color="red" id="server-fail" display="none">
                     Server Error. Try again after some time
